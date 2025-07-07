@@ -63,5 +63,5 @@ for page in range(1, 500):
 
 # Save to CSV
 df = pd.DataFrame(data)
-df.to_csv("capitol_trades_data.csv", index=False)
+df.to_csv(r"capitol trades\capitol_trades_data.csv", index=False)
 print("Scraping completed and saved.")

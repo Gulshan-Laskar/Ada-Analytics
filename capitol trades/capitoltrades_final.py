@@ -1,7 +1,7 @@
 import pandas as pd
 
 # Load your data
-df = pd.read_csv("C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\trades_with_returns.csv")
+df = pd.read_csv(r"capitol trades\trades_with_returns.csv")
 
 # Step 4️⃣: Calculate politician-level influence
 grouped = df.groupby('Politician').agg({
@@ -60,4 +60,4 @@ if len(filtered_df) == 0:
 
 
 # Save output
-filtered_df.to_csv("C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\filtered_trade_signals.csv", index=False)
+filtered_df.to_csv(r"capitol trades\filtered_trade_signals.csv", index=False)
