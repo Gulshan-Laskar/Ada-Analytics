@@ -1,0 +1,1423 @@
+2025-07-06 18:36:54,594 HTTP Error 404: 
+2025-07-06 18:36:54,800 
+1 Failed download:
+2025-07-06 18:36:54,800 ['INCTENB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:00,756 HTTP Error 404: 
+2025-07-06 18:37:00,977 
+1 Failed download:
+2025-07-06 18:37:00,977 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:01,932 
+1 Failed download:
+2025-07-06 18:37:01,932 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:02,481 
+1 Failed download:
+2025-07-06 18:37:02,481 ['NVLYB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:07,578 
+1 Failed download:
+2025-07-06 18:37:07,578 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:08,054 
+1 Failed download:
+2025-07-06 18:37:08,054 ['PLCSTX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:10,547 
+1 Failed download:
+2025-07-06 18:37:10,547 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:21,541 
+1 Failed download:
+2025-07-06 18:37:21,541 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:22,102 
+1 Failed download:
+2025-07-06 18:37:22,102 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:22,455 
+1 Failed download:
+2025-07-06 18:37:22,455 ['PLCJCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:22,467 
+1 Failed download:
+2025-07-06 18:37:22,467 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:22,668 
+1 Failed download:
+2025-07-06 18:37:22,668 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:28,111 
+1 Failed download:
+2025-07-06 18:37:28,111 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:32,215 
+1 Failed download:
+2025-07-06 18:37:32,215 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:38,514 
+1 Failed download:
+2025-07-06 18:37:38,514 ['PLCST']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:40,279 Skipping invalid ticker: nan
+2025-07-06 18:37:42,446 
+1 Failed download:
+2025-07-06 18:37:42,446 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:48,348 
+1 Failed download:
+2025-07-06 18:37:48,348 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:48,361 
+1 Failed download:
+2025-07-06 18:37:48,361 ['PLCST']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:48,792 
+1 Failed download:
+2025-07-06 18:37:48,793 ['PLCST']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:50,019 
+1 Failed download:
+2025-07-06 18:37:50,020 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:52,122 
+1 Failed download:
+2025-07-06 18:37:52,122 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:37:54,290 
+1 Failed download:
+2025-07-06 18:37:54,290 ['CORPSOLV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:00,388 
+1 Failed download:
+2025-07-06 18:38:00,388 ['CORPVLTO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:03,403 
+1 Failed download:
+2025-07-06 18:38:03,403 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:08,943 
+1 Failed download:
+2025-07-06 18:38:08,943 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:10,678 
+1 Failed download:
+2025-07-06 18:38:10,678 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:10,691 
+1 Failed download:
+2025-07-06 18:38:10,691 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:10,703 
+1 Failed download:
+2025-07-06 18:38:10,704 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:10,716 
+1 Failed download:
+2025-07-06 18:38:10,717 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:17,077 
+1 Failed download:
+2025-07-06 18:38:17,077 ['ETFSGOV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:18,074 
+1 Failed download:
+2025-07-06 18:38:18,074 ['SELVMHF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:26,860 
+1 Failed download:
+2025-07-06 18:38:26,860 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:26,873 
+1 Failed download:
+2025-07-06 18:38:26,873 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:26,887 
+1 Failed download:
+2025-07-06 18:38:26,887 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:26,900 
+1 Failed download:
+2025-07-06 18:38:26,900 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:27,296 
+1 Failed download:
+2025-07-06 18:38:27,296 ['ETFSGOV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:27,338 
+1 Failed download:
+2025-07-06 18:38:27,338 ['SELVMHF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:27,920 
+1 Failed download:
+2025-07-06 18:38:27,920 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:27,933 
+1 Failed download:
+2025-07-06 18:38:27,933 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:27,946 
+1 Failed download:
+2025-07-06 18:38:27,946 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:28,283 
+1 Failed download:
+2025-07-06 18:38:28,283 ['ETFSGOV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:28,324 
+1 Failed download:
+2025-07-06 18:38:28,324 ['SELVMHF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:31,152 
+1 Failed download:
+2025-07-06 18:38:31,152 ['PLCAPTV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:31,325 Skipping invalid ticker: nan
+2025-07-06 18:38:31,974 
+1 Failed download:
+2025-07-06 18:38:31,974 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:32,765 
+1 Failed download:
+2025-07-06 18:38:32,765 ['CORPBLBD']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:36,731 
+1 Failed download:
+2025-07-06 18:38:36,731 ['CORPCEG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:38,421 
+1 Failed download:
+2025-07-06 18:38:38,421 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:38,435 
+1 Failed download:
+2025-07-06 18:38:38,435 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:43,116 
+1 Failed download:
+2025-07-06 18:38:43,116 ['PEAK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:45,185 
+1 Failed download:
+2025-07-06 18:38:45,185 ['JBT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:55,058 
+1 Failed download:
+2025-07-06 18:38:55,058 ['PLCPNR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:38:56,211 Skipping invalid ticker: nan
+2025-07-06 18:38:59,026 
+1 Failed download:
+2025-07-06 18:38:59,026 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:01,380 
+1 Failed download:
+2025-07-06 18:39:01,380 ['PNM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:05,388 
+1 Failed download:
+2025-07-06 18:39:05,388 ['PLCWTW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:08,358 
+1 Failed download:
+2025-07-06 18:39:08,358 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:10,595 
+1 Failed download:
+2025-07-06 18:39:10,595 ['SEALIZY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:11,418 
+1 Failed download:
+2025-07-06 18:39:11,418 ['INCAPPF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:11,977 
+1 Failed download:
+2025-07-06 18:39:11,977 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:11,990 
+1 Failed download:
+2025-07-06 18:39:11,990 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:12,287 Skipping invalid ticker: nan
+2025-07-06 18:39:12,818 
+1 Failed download:
+2025-07-06 18:39:12,818 ['ABATLKY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:15,254 
+1 Failed download:
+2025-07-06 18:39:15,254 ['INCCDRE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:19,657 
+1 Failed download:
+2025-07-06 18:39:19,657 ['SADASTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:22,006 
+1 Failed download:
+2025-07-06 18:39:22,007 ['CVFMX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:22,585 
+1 Failed download:
+2025-07-06 18:39:22,585 ['PLCHLN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:22,779 Skipping invalid ticker: nan
+2025-07-06 18:39:24,218 
+1 Failed download:
+2025-07-06 18:39:24,218 ['INCINSM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:24,221 Skipping invalid ticker: nan
+2025-07-06 18:39:28,378 Skipping invalid ticker: nan
+2025-07-06 18:39:29,538 
+1 Failed download:
+2025-07-06 18:39:29,539 ['TBKTLK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:29,916 
+1 Failed download:
+2025-07-06 18:39:29,916 ['ROLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:30,590 
+1 Failed download:
+2025-07-06 18:39:30,590 ['AGRHHBY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:31,673 
+1 Failed download:
+2025-07-06 18:39:31,673 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:32,190 
+1 Failed download:
+2025-07-06 18:39:32,190 ['PLCSHEL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:34,187 
+1 Failed download:
+2025-07-06 18:39:34,187 ['INCSTRL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:36,045 
+1 Failed download:
+2025-07-06 18:39:36,045 ['LTDTCEHY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:38,564 
+1 Failed download:
+2025-07-06 18:39:38,564 ['ETFHACK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:39,068 
+1 Failed download:
+2025-07-06 18:39:39,068 ['ETFURA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:39,071 Skipping invalid ticker: nan
+2025-07-06 18:39:39,385 
+1 Failed download:
+2025-07-06 18:39:39,385 ['ETFXMHQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:39,847 
+1 Failed download:
+2025-07-06 18:39:39,847 ['ETFTLH']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:40,244 
+1 Failed download:
+2025-07-06 18:39:40,244 ['ETFIEI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:40,756 
+1 Failed download:
+2025-07-06 18:39:40,757 ['ETFHYBB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:41,196 
+1 Failed download:
+2025-07-06 18:39:41,196 ['ETFZROZ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:41,692 
+1 Failed download:
+2025-07-06 18:39:41,692 ['ETFREGL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:42,305 
+1 Failed download:
+2025-07-06 18:39:42,305 ['ETFSPDW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:42,818 
+1 Failed download:
+2025-07-06 18:39:42,818 ['ETFSLYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:43,278 
+1 Failed download:
+2025-07-06 18:39:43,279 ['ETFSLYV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:43,824 
+1 Failed download:
+2025-07-06 18:39:43,824 ['ETFSPYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:44,253 
+1 Failed download:
+2025-07-06 18:39:44,253 ['ETFSPYV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:44,703 
+1 Failed download:
+2025-07-06 18:39:44,703 ['ETFSDY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:45,122 
+1 Failed download:
+2025-07-06 18:39:45,123 ['ETFMDYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:45,613 
+1 Failed download:
+2025-07-06 18:39:45,613 ['ETFMDYV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:45,910 
+1 Failed download:
+2025-07-06 18:39:45,910 ['ETFSPHY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:46,726 
+1 Failed download:
+2025-07-06 18:39:46,726 ['TRGLDM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:49,990 
+1 Failed download:
+2025-07-06 18:39:49,990 ['ETFHYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:50,682 
+1 Failed download:
+2025-07-06 18:39:50,682 ['CMDFTGC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:52,184 
+1 Failed download:
+2025-07-06 18:39:52,184 ['ETFIVW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:52,634 
+1 Failed download:
+2025-07-06 18:39:52,634 ['ETFSHY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:54,927 
+1 Failed download:
+2025-07-06 18:39:54,927 ['PLCASHTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:54,940 
+1 Failed download:
+2025-07-06 18:39:54,940 ['PLCASHTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:54,953 
+1 Failed download:
+2025-07-06 18:39:54,953 ['PLCASHTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:54,966 
+1 Failed download:
+2025-07-06 18:39:54,966 ['PLCASHTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:39:58,270 
+1 Failed download:
+2025-07-06 18:39:58,270 ['LPET']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-04-04 00:00:00 -> 2025-05-21 00:00:00)')
+2025-07-06 18:39:58,977 
+1 Failed download:
+2025-07-06 18:39:58,977 ['CORPORATIONARCC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:01,822 
+1 Failed download:
+2025-07-06 18:40:01,822 ['AGADDYY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:03,203 
+1 Failed download:
+2025-07-06 18:40:03,203 ['NVBUD']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:03,450 Skipping invalid ticker: nan
+2025-07-06 18:40:08,891 
+1 Failed download:
+2025-07-06 18:40:08,892 ['ABASAZY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:08,905 
+1 Failed download:
+2025-07-06 18:40:08,905 ['ABASAZY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:09,327 
+1 Failed download:
+2025-07-06 18:40:09,327 ['PLCAZN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:09,950 
+1 Failed download:
+2025-07-06 18:40:09,950 ['PLCBCS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:11,434 
+1 Failed download:
+2025-07-06 18:40:11,434 ['PLCBP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:20,688 
+1 Failed download:
+2025-07-06 18:40:20,688 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:20,702 
+1 Failed download:
+2025-07-06 18:40:20,702 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:21,186 
+1 Failed download:
+2025-07-06 18:40:21,186 ['AGDB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:21,574 
+1 Failed download:
+2025-07-06 18:40:21,574 ['AGDTEGY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:22,079 
+1 Failed download:
+2025-07-06 18:40:22,079 ['SDSDVY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:24,190 
+1 Failed download:
+2025-07-06 18:40:24,191 ['PLCGSK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:25,143 
+1 Failed download:
+2025-07-06 18:40:25,143 ['PLCHSBC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:26,051 
+1 Failed download:
+2025-07-06 18:40:26,051 ['SPAISNPY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:27,061 
+1 Failed download:
+2025-07-06 18:40:27,061 ['PLCJCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:27,652 
+1 Failed download:
+2025-07-06 18:40:27,652 ['SELVMHF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:29,111 
+1 Failed download:
+2025-07-06 18:40:29,111 ['LTDMHVIY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:30,207 
+1 Failed download:
+2025-07-06 18:40:30,207 ['PLCNWG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:32,973 
+1 Failed download:
+2025-07-06 18:40:32,974 ['AGRHHBY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:34,069 
+1 Failed download:
+2025-07-06 18:40:34,069 ['SASAFRY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:34,754 
+1 Failed download:
+2025-07-06 18:40:34,755 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:35,368 
+1 Failed download:
+2025-07-06 18:40:35,369 ['PLCSHEL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:35,833 
+1 Failed download:
+2025-07-06 18:40:35,833 ['AGSIEGY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:36,805 
+1 Failed download:
+2025-07-06 18:40:36,806 ['ASPOT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:38,433 
+1 Failed download:
+2025-07-06 18:40:38,433 ['AGUBS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:38,739 
+1 Failed download:
+2025-07-06 18:40:38,739 ['SPAUNCRY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:39,202 
+1 Failed download:
+2025-07-06 18:40:39,202 ['PLCUL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:40,004 
+1 Failed download:
+2025-07-06 18:40:40,005 ['SAVCISY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:43,700 
+1 Failed download:
+2025-07-06 18:40:43,700 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:46,823 
+1 Failed download:
+2025-07-06 18:40:46,823 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:55,584 
+1 Failed download:
+2025-07-06 18:40:55,584 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:55,994 
+1 Failed download:
+2025-07-06 18:40:55,994 ['PLCAPTV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:57,285 
+1 Failed download:
+2025-07-06 18:40:57,285 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:57,997 
+1 Failed download:
+2025-07-06 18:40:57,997 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:40:59,536 
+1 Failed download:
+2025-07-06 18:40:59,536 ['PLCCCL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:04,632 
+1 Failed download:
+2025-07-06 18:41:04,633 ['CORPBUSE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:10,877 
+1 Failed download:
+2025-07-06 18:41:10,877 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:20,118 
+1 Failed download:
+2025-07-06 18:41:20,118 ['CORPSNDK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:20,885 
+1 Failed download:
+2025-07-06 18:41:20,885 ['INCSNDR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:21,252 
+1 Failed download:
+2025-07-06 18:41:21,252 ['ASPOT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:24,765 
+1 Failed download:
+2025-07-06 18:41:24,766 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:36,242 
+1 Failed download:
+2025-07-06 18:41:36,242 ['INCCXDO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:44,214 
+1 Failed download:
+2025-07-06 18:41:44,214 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:48,144 
+1 Failed download:
+2025-07-06 18:41:48,144 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:50,886 
+1 Failed download:
+2025-07-06 18:41:50,886 ['INCRDDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:50,900 
+1 Failed download:
+2025-07-06 18:41:50,900 ['INCRDDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:52,264 
+1 Failed download:
+2025-07-06 18:41:52,264 ['CORPSNDK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:52,903 
+1 Failed download:
+2025-07-06 18:41:52,903 ['PLCSTX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:41:53,592 
+1 Failed download:
+2025-07-06 18:41:53,592 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:13,275 
+1 Failed download:
+2025-07-06 18:42:13,275 ['PLCBP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:23,565 
+1 Failed download:
+2025-07-06 18:42:23,565 ['ETFVOO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:24,789 
+1 Failed download:
+2025-07-06 18:42:24,789 ['INCALKT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:24,802 
+1 Failed download:
+2025-07-06 18:42:24,802 ['INCALKT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:25,668 
+1 Failed download:
+2025-07-06 18:42:25,668 ['INCARIS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:26,151 
+1 Failed download:
+2025-07-06 18:42:26,151 ['AGBDRFY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:27,346 Skipping invalid ticker: nan
+2025-07-06 18:42:28,613 
+1 Failed download:
+2025-07-06 18:42:28,613 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:29,116 
+1 Failed download:
+2025-07-06 18:42:29,116 ['CORPFLYW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:32,774 
+1 Failed download:
+2025-07-06 18:42:32,774 ['AGRNMBY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:34,786 
+1 Failed download:
+2025-07-06 18:42:34,786 ['INCPCVX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:34,799 
+1 Failed download:
+2025-07-06 18:42:34,799 ['INCPCVX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:34,813 
+1 Failed download:
+2025-07-06 18:42:34,813 ['INCPCVX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:36,054 
+1 Failed download:
+2025-07-06 18:42:36,054 ['PLCWTW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:38,935 
+1 Failed download:
+2025-07-06 18:42:38,935 ['ETFVTV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:39,417 
+1 Failed download:
+2025-07-06 18:42:39,417 ['ETFVEA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:39,932 
+1 Failed download:
+2025-07-06 18:42:39,933 ['ETFIUSG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:42,314 
+1 Failed download:
+2025-07-06 18:42:42,314 ['INCCNM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:42,796 
+1 Failed download:
+2025-07-06 18:42:42,796 ['CDAY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,043 
+1 Failed download:
+2025-07-06 18:42:46,043 ['SKI']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-04-03 00:00:00 -> 2025-05-08 00:00:00)')
+2025-07-06 18:42:46,358 
+1 Failed download:
+2025-07-06 18:42:46,358 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,372 
+1 Failed download:
+2025-07-06 18:42:46,372 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,385 
+1 Failed download:
+2025-07-06 18:42:46,385 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,398 
+1 Failed download:
+2025-07-06 18:42:46,398 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,412 
+1 Failed download:
+2025-07-06 18:42:46,412 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:46,887 
+1 Failed download:
+2025-07-06 18:42:46,888 ['XRP']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-04-24 00:00:00 -> 2025-05-07 00:00:00)')
+2025-07-06 18:42:47,318 
+1 Failed download:
+2025-07-06 18:42:47,318 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:48,609 
+1 Failed download:
+2025-07-06 18:42:48,610 ['PLCAMCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:50,582 
+1 Failed download:
+2025-07-06 18:42:50,582 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:52,563 
+1 Failed download:
+2025-07-06 18:42:52,563 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:42:56,063 
+1 Failed download:
+2025-07-06 18:42:56,063 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:02,837 
+1 Failed download:
+2025-07-06 18:43:02,837 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:03,634 
+1 Failed download:
+2025-07-06 18:43:03,634 ['INCINVA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:03,647 
+1 Failed download:
+2025-07-06 18:43:03,647 ['INCINVA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:04,711 
+1 Failed download:
+2025-07-06 18:43:04,711 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:05,486 
+1 Failed download:
+2025-07-06 18:43:05,486 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:06,648 
+1 Failed download:
+2025-07-06 18:43:06,648 ['AGNVS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:08,313 
+1 Failed download:
+2025-07-06 18:43:08,313 ['AGSDZNY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:09,301 
+1 Failed download:
+2025-07-06 18:43:09,301 ['INCTBPH']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:10,716 
+1 Failed download:
+2025-07-06 18:43:10,716 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:10,730 
+1 Failed download:
+2025-07-06 18:43:10,730 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:10,743 
+1 Failed download:
+2025-07-06 18:43:10,743 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:12,715 Skipping invalid ticker: nan
+2025-07-06 18:43:13,356 
+1 Failed download:
+2025-07-06 18:43:13,356 ['INCRDDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:14,029 
+1 Failed download:
+2025-07-06 18:43:14,029 ['CORPSNDK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:15,533 
+1 Failed download:
+2025-07-06 18:43:15,533 ['COGIC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:16,547 
+1 Failed download:
+2025-07-06 18:43:16,547 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:16,561 
+1 Failed download:
+2025-07-06 18:43:16,561 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:17,511 
+1 Failed download:
+2025-07-06 18:43:17,511 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:17,525 
+1 Failed download:
+2025-07-06 18:43:17,525 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:17,884 
+1 Failed download:
+2025-07-06 18:43:17,884 ['ETFIVW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:18,745 
+1 Failed download:
+2025-07-06 18:43:18,745 ['ETFTBLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:18,759 
+1 Failed download:
+2025-07-06 18:43:18,759 ['ETFTBLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:20,043 
+1 Failed download:
+2025-07-06 18:43:20,043 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:22,109 
+1 Failed download:
+2025-07-06 18:43:22,109 ['PLCLDNXF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:23,411 
+1 Failed download:
+2025-07-06 18:43:23,411 ['SASAFRY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:23,928 
+1 Failed download:
+2025-07-06 18:43:23,928 ['NVPROSY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:24,196 
+1 Failed download:
+2025-07-06 18:43:24,196 ['NVPROSY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:25,077 
+1 Failed download:
+2025-07-06 18:43:25,077 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:25,092 
+1 Failed download:
+2025-07-06 18:43:25,092 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:25,105 
+1 Failed download:
+2025-07-06 18:43:25,105 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:27,464 
+1 Failed download:
+2025-07-06 18:43:27,464 ['ETFVTI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:31,636 
+1 Failed download:
+2025-07-06 18:43:31,636 ['AGADDYY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:33,497 
+1 Failed download:
+2025-07-06 18:43:33,497 ['NVBUD']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:34,029 Skipping invalid ticker: nan
+2025-07-06 18:43:34,030 Skipping invalid ticker: nan
+2025-07-06 18:43:34,523 
+1 Failed download:
+2025-07-06 18:43:34,523 ['PLCAZN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:35,188 
+1 Failed download:
+2025-07-06 18:43:35,188 ['PLCBCS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:36,275 
+1 Failed download:
+2025-07-06 18:43:36,275 ['PLCBP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:36,289 
+1 Failed download:
+2025-07-06 18:43:36,289 ['PLCBP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:40,165 
+1 Failed download:
+2025-07-06 18:43:40,166 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:40,607 
+1 Failed download:
+2025-07-06 18:43:40,607 ['AGDB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:40,933 
+1 Failed download:
+2025-07-06 18:43:40,934 ['AGDTEGY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:41,468 
+1 Failed download:
+2025-07-06 18:43:41,468 ['SDSDVY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:43,612 
+1 Failed download:
+2025-07-06 18:43:43,612 ['PLCGSK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:44,524 
+1 Failed download:
+2025-07-06 18:43:44,524 ['PLCHSBC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:44,934 
+1 Failed download:
+2025-07-06 18:43:44,934 ['SPAISNPY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:46,052 
+1 Failed download:
+2025-07-06 18:43:46,052 ['PLCJCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:46,612 
+1 Failed download:
+2025-07-06 18:43:46,612 ['SELVMHF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:47,255 
+1 Failed download:
+2025-07-06 18:43:47,255 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:47,268 
+1 Failed download:
+2025-07-06 18:43:47,268 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:48,661 
+1 Failed download:
+2025-07-06 18:43:48,661 ['LTDMHVIY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:49,943 
+1 Failed download:
+2025-07-06 18:43:49,943 ['PLCNWG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:53,893 
+1 Failed download:
+2025-07-06 18:43:53,893 ['AGRHHBY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:54,735 
+1 Failed download:
+2025-07-06 18:43:54,735 ['SASAFRY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:55,305 
+1 Failed download:
+2025-07-06 18:43:55,305 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:55,319 
+1 Failed download:
+2025-07-06 18:43:55,320 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:55,962 
+1 Failed download:
+2025-07-06 18:43:55,963 ['PLCSHEL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:56,519 
+1 Failed download:
+2025-07-06 18:43:56,519 ['AGSIEGY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:57,744 
+1 Failed download:
+2025-07-06 18:43:57,744 ['ASPOT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:59,451 
+1 Failed download:
+2025-07-06 18:43:59,451 ['AGUBS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:43:59,881 
+1 Failed download:
+2025-07-06 18:43:59,881 ['SPAUNCRY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:00,239 
+1 Failed download:
+2025-07-06 18:44:00,239 ['PLCUL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:01,178 
+1 Failed download:
+2025-07-06 18:44:01,178 ['SAVCISY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:08,566 
+1 Failed download:
+2025-07-06 18:44:08,567 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:08,580 
+1 Failed download:
+2025-07-06 18:44:08,580 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:08,593 
+1 Failed download:
+2025-07-06 18:44:08,593 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:08,607 
+1 Failed download:
+2025-07-06 18:44:08,607 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:11,329 
+1 Failed download:
+2025-07-06 18:44:11,329 ['SEAS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:16,346 
+1 Failed download:
+2025-07-06 18:44:16,346 ['SNVO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:16,360 
+1 Failed download:
+2025-07-06 18:44:16,360 ['SNVO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:17,968 
+1 Failed download:
+2025-07-06 18:44:17,968 ['INCTW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:17,982 
+1 Failed download:
+2025-07-06 18:44:17,982 ['INCTW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:18,437 
+1 Failed download:
+2025-07-06 18:44:18,437 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:20,899 
+1 Failed download:
+2025-07-06 18:44:20,900 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:24,598 
+1 Failed download:
+2025-07-06 18:44:24,598 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:25,702 
+1 Failed download:
+2025-07-06 18:44:25,702 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:26,693 
+1 Failed download:
+2025-07-06 18:44:26,693 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:29,884 
+1 Failed download:
+2025-07-06 18:44:29,884 ['CORPCEG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:32,075 
+1 Failed download:
+2025-07-06 18:44:32,075 ['CORPBUSE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:40,943 
+1 Failed download:
+2025-07-06 18:44:40,943 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:43,361 
+1 Failed download:
+2025-07-06 18:44:43,361 ['INCSNDR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:45,866 
+1 Failed download:
+2025-07-06 18:44:45,866 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:46,070 Skipping invalid ticker: nan
+2025-07-06 18:44:47,037 
+1 Failed download:
+2025-07-06 18:44:47,037 ['INCPCVX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:47,209 Skipping invalid ticker: nan
+2025-07-06 18:44:47,210 Skipping invalid ticker: nan
+2025-07-06 18:44:49,948 
+1 Failed download:
+2025-07-06 18:44:49,948 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:49,961 
+1 Failed download:
+2025-07-06 18:44:49,961 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:49,975 
+1 Failed download:
+2025-07-06 18:44:49,975 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:51,140 
+1 Failed download:
+2025-07-06 18:44:51,140 ['PLCCCL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:51,889 
+1 Failed download:
+2025-07-06 18:44:51,889 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:51,902 
+1 Failed download:
+2025-07-06 18:44:51,903 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:44:51,911 Skipping invalid ticker: nan
+2025-07-06 18:44:53,245 Skipping invalid ticker: nan
+2025-07-06 18:44:58,391 Skipping invalid ticker: nan
+2025-07-06 18:45:02,215 
+1 Failed download:
+2025-07-06 18:45:02,216 ['SNVO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:02,229 
+1 Failed download:
+2025-07-06 18:45:02,229 ['SNVO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:04,094 
+1 Failed download:
+2025-07-06 18:45:04,095 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:05,287 
+1 Failed download:
+2025-07-06 18:45:05,287 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:15,736 Skipping invalid ticker: nan
+2025-07-06 18:45:16,728 
+1 Failed download:
+2025-07-06 18:45:16,728 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:32,304 
+1 Failed download:
+2025-07-06 18:45:32,304 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:37,812 
+1 Failed download:
+2025-07-06 18:45:37,812 ['PLCJCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:44,553 
+1 Failed download:
+2025-07-06 18:45:44,553 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:47,213 
+1 Failed download:
+2025-07-06 18:45:47,213 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:55,785 
+1 Failed download:
+2025-07-06 18:45:55,785 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:56,821 
+1 Failed download:
+2025-07-06 18:45:56,821 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:57,222 
+1 Failed download:
+2025-07-06 18:45:57,222 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:57,661 
+1 Failed download:
+2025-07-06 18:45:57,661 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:57,675 
+1 Failed download:
+2025-07-06 18:45:57,675 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:45:58,104 
+1 Failed download:
+2025-07-06 18:45:58,104 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:04,452 
+1 Failed download:
+2025-07-06 18:46:04,452 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:04,466 
+1 Failed download:
+2025-07-06 18:46:04,467 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:05,137 Skipping invalid ticker: nan
+2025-07-06 18:46:05,764 
+1 Failed download:
+2025-07-06 18:46:05,764 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:06,472 
+1 Failed download:
+2025-07-06 18:46:06,472 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:08,636 
+1 Failed download:
+2025-07-06 18:46:08,636 ['PLCJCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:16,799 
+1 Failed download:
+2025-07-06 18:46:16,799 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:17,410 
+1 Failed download:
+2025-07-06 18:46:17,410 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:18,248 
+1 Failed download:
+2025-07-06 18:46:18,249 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:19,020 
+1 Failed download:
+2025-07-06 18:46:19,020 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:20,133 
+1 Failed download:
+2025-07-06 18:46:20,133 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:28,241 
+1 Failed download:
+2025-07-06 18:46:28,241 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:33,326 
+1 Failed download:
+2025-07-06 18:46:33,326 ['PLCSTX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:38,446 
+1 Failed download:
+2025-07-06 18:46:38,446 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:39,547 
+1 Failed download:
+2025-07-06 18:46:39,547 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:42,476 
+1 Failed download:
+2025-07-06 18:46:42,476 ['CHK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:46,840 
+1 Failed download:
+2025-07-06 18:46:46,840 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:46,843 Skipping invalid ticker: nan
+2025-07-06 18:46:48,515 Skipping invalid ticker: nan
+2025-07-06 18:46:49,281 
+1 Failed download:
+2025-07-06 18:46:49,281 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:50,136 
+1 Failed download:
+2025-07-06 18:46:50,137 ['PLCDAVA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:50,867 
+1 Failed download:
+2025-07-06 18:46:50,867 ['CORPFLYW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:51,629 
+1 Failed download:
+2025-07-06 18:46:51,629 ['AGIFNNY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:51,644 
+1 Failed download:
+2025-07-06 18:46:51,645 ['AGIFNNY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:52,618 
+1 Failed download:
+2025-07-06 18:46:52,618 ['ITCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:54,258 
+1 Failed download:
+2025-07-06 18:46:54,258 ['TBKTLK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:55,416 
+1 Failed download:
+2025-07-06 18:46:55,416 ['ASPOT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:46:58,150 
+1 Failed download:
+2025-07-06 18:46:58,150 ['SKI']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-03-13 00:00:00 -> 2025-04-18 00:00:00)')
+2025-07-06 18:46:58,674 
+1 Failed download:
+2025-07-06 18:46:58,674 ['CORPCEG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:02,041 
+1 Failed download:
+2025-07-06 18:47:02,041 ['LTDNU']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:02,781 
+1 Failed download:
+2025-07-06 18:47:02,781 ['INCRDDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:06,417 
+1 Failed download:
+2025-07-06 18:47:06,418 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:08,861 Skipping invalid ticker: nan
+2025-07-06 18:47:20,227 
+1 Failed download:
+2025-07-06 18:47:20,227 ['RHRH']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:20,784 Skipping invalid ticker: nan
+2025-07-06 18:47:21,320 
+1 Failed download:
+2025-07-06 18:47:21,320 ['PLCBCS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:22,603 
+1 Failed download:
+2025-07-06 18:47:22,603 ['PLCFERG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:24,250 
+1 Failed download:
+2025-07-06 18:47:24,250 ['ITCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:25,915 Skipping invalid ticker: nan
+2025-07-06 18:47:25,916 Skipping invalid ticker: nan
+2025-07-06 18:47:28,199 
+1 Failed download:
+2025-07-06 18:47:28,199 ['LTDTCEHY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:28,836 
+1 Failed download:
+2025-07-06 18:47:28,836 ['INCCOCO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:29,545 
+1 Failed download:
+2025-07-06 18:47:29,545 ['INCUTZ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:30,321 Skipping invalid ticker: nan
+2025-07-06 18:47:38,262 
+1 Failed download:
+2025-07-06 18:47:38,262 ['LPARLP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:38,609 
+1 Failed download:
+2025-07-06 18:47:38,609 ['INCEFC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:38,853 
+1 Failed download:
+2025-07-06 18:47:38,853 ['LPET']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-03-07 00:00:00 -> 2025-04-14 00:00:00)')
+2025-07-06 18:47:39,271 
+1 Failed download:
+2025-07-06 18:47:39,271 ['LTDFLNG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:42,633 
+1 Failed download:
+2025-07-06 18:47:42,633 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:45,456 
+1 Failed download:
+2025-07-06 18:47:45,456 ['FLT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:45,987 
+1 Failed download:
+2025-07-06 18:47:45,987 ['CDAY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:48,680 
+1 Failed download:
+2025-07-06 18:47:48,681 ['LTDVIK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:49,971 
+1 Failed download:
+2025-07-06 18:47:49,971 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:49,987 
+1 Failed download:
+2025-07-06 18:47:49,987 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:49,999 
+1 Failed download:
+2025-07-06 18:47:50,000 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:50,019 
+1 Failed download:
+2025-07-06 18:47:50,019 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:50,033 
+1 Failed download:
+2025-07-06 18:47:50,033 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:50,047 
+1 Failed download:
+2025-07-06 18:47:50,047 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:50,059 
+1 Failed download:
+2025-07-06 18:47:50,059 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:50,073 
+1 Failed download:
+2025-07-06 18:47:50,073 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:52,435 
+1 Failed download:
+2025-07-06 18:47:52,435 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:52,451 
+1 Failed download:
+2025-07-06 18:47:52,451 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:52,637 Skipping invalid ticker: nan
+2025-07-06 18:47:57,454 
+1 Failed download:
+2025-07-06 18:47:57,455 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:47:57,848 
+1 Failed download:
+2025-07-06 18:47:57,848 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:00,246 
+1 Failed download:
+2025-07-06 18:48:00,246 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:03,440 
+1 Failed download:
+2025-07-06 18:48:03,440 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:04,513 
+1 Failed download:
+2025-07-06 18:48:04,513 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:11,188 
+1 Failed download:
+2025-07-06 18:48:11,188 ['PLCSTE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:11,804 
+1 Failed download:
+2025-07-06 18:48:11,805 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:20,900 
+1 Failed download:
+2025-07-06 18:48:20,900 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:20,913 
+1 Failed download:
+2025-07-06 18:48:20,913 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:21,189 Skipping invalid ticker: nan
+2025-07-06 18:48:23,771 
+1 Failed download:
+2025-07-06 18:48:23,771 ['FLT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:23,787 
+1 Failed download:
+2025-07-06 18:48:23,787 ['FLT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:26,969 
+1 Failed download:
+2025-07-06 18:48:26,969 ['TPX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:26,985 
+1 Failed download:
+2025-07-06 18:48:26,985 ['TPX']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:32,959 
+1 Failed download:
+2025-07-06 18:48:32,959 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:32,972 
+1 Failed download:
+2025-07-06 18:48:32,972 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:34,243 
+1 Failed download:
+2025-07-06 18:48:34,243 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:34,260 
+1 Failed download:
+2025-07-06 18:48:34,260 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:34,273 
+1 Failed download:
+2025-07-06 18:48:34,273 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:34,286 
+1 Failed download:
+2025-07-06 18:48:34,286 ['INCFLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:34,904 Skipping invalid ticker: nan
+2025-07-06 18:48:34,905 Skipping invalid ticker: nan
+2025-07-06 18:48:35,785 
+1 Failed download:
+2025-07-06 18:48:35,785 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:36,845 
+1 Failed download:
+2025-07-06 18:48:36,846 ['PLCHSBC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:37,430 Skipping invalid ticker: nan
+2025-07-06 18:48:38,086 
+1 Failed download:
+2025-07-06 18:48:38,087 ['PDRDY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:39,680 
+1 Failed download:
+2025-07-06 18:48:39,680 ['PLCAPTV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:42,008 
+1 Failed download:
+2025-07-06 18:48:42,008 ['CORPCEG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:42,519 
+1 Failed download:
+2025-07-06 18:48:42,519 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:42,533 
+1 Failed download:
+2025-07-06 18:48:42,533 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:46,435 
+1 Failed download:
+2025-07-06 18:48:46,436 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:51,699 
+1 Failed download:
+2025-07-06 18:48:51,700 ['SKI']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-02-19 00:00:00 -> 2025-03-20 00:00:00)')
+2025-07-06 18:48:56,312 
+1 Failed download:
+2025-07-06 18:48:56,312 ['AGUBS']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:48:56,511 Skipping invalid ticker: nan
+2025-07-06 18:48:57,874 
+1 Failed download:
+2025-07-06 18:48:57,874 ['INCRDDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:00,444 
+1 Failed download:
+2025-07-06 18:49:00,444 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:01,791 
+1 Failed download:
+2025-07-06 18:49:01,791 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:05,258 
+1 Failed download:
+2025-07-06 18:49:05,258 ['CORPBUSE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:08,598 
+1 Failed download:
+2025-07-06 18:49:08,598 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:10,277 
+1 Failed download:
+2025-07-06 18:49:10,278 ['PLCNVT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:13,852 
+1 Failed download:
+2025-07-06 18:49:13,853 ['CORPSNDK']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:16,016 Skipping invalid ticker: nan
+2025-07-06 18:49:16,918 Skipping invalid ticker: nan
+2025-07-06 18:49:23,550 
+1 Failed download:
+2025-07-06 18:49:23,550 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:24,113 
+1 Failed download:
+2025-07-06 18:49:24,114 ['INCGEV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:25,643 
+1 Failed download:
+2025-07-06 18:49:25,643 ['COMPANYDE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:26,354 
+1 Failed download:
+2025-07-06 18:49:26,354 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:28,995 
+1 Failed download:
+2025-07-06 18:49:28,995 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:33,553 
+1 Failed download:
+2025-07-06 18:49:33,553 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:42,719 
+1 Failed download:
+2025-07-06 18:49:42,719 ['NVLYB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:43,671 
+1 Failed download:
+2025-07-06 18:49:43,671 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:45,765 
+1 Failed download:
+2025-07-06 18:49:45,766 ['INCSMCI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:52,739 
+1 Failed download:
+2025-07-06 18:49:52,739 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:49:54,238 
+1 Failed download:
+2025-07-06 18:49:54,238 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:01,589 
+1 Failed download:
+2025-07-06 18:50:01,589 ['PLCAON']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:11,185 
+1 Failed download:
+2025-07-06 18:50:11,185 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:11,832 
+1 Failed download:
+2025-07-06 18:50:11,833 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:11,846 
+1 Failed download:
+2025-07-06 18:50:11,846 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:11,859 
+1 Failed download:
+2025-07-06 18:50:11,859 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:11,872 
+1 Failed download:
+2025-07-06 18:50:11,872 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:16,648 
+1 Failed download:
+2025-07-06 18:50:16,648 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:17,153 
+1 Failed download:
+2025-07-06 18:50:17,153 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:22,570 
+1 Failed download:
+2025-07-06 18:50:22,570 ['INCGEHC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:26,143 
+1 Failed download:
+2025-07-06 18:50:26,143 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:26,695 
+1 Failed download:
+2025-07-06 18:50:26,696 ['PLCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:27,142 
+1 Failed download:
+2025-07-06 18:50:27,142 ['NVNXPI']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:27,766 
+1 Failed download:
+2025-07-06 18:50:27,766 ['PLCSTE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:36,054 
+1 Failed download:
+2025-07-06 18:50:36,054 ['INCUCTT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:36,685 
+1 Failed download:
+2025-07-06 18:50:36,685 ['NCR']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:39,012 
+1 Failed download:
+2025-07-06 18:50:39,012 ['PLCETN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:45,295 
+1 Failed download:
+2025-07-06 18:50:45,295 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:49,363 
+1 Failed download:
+2025-07-06 18:50:49,363 ['RE']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:58,527 
+1 Failed download:
+2025-07-06 18:50:58,528 ['CORPORATIONBALL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:50:59,038 
+1 Failed download:
+2025-07-06 18:50:59,038 ['CORPVLTO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:03,882 
+1 Failed download:
+2025-07-06 18:51:03,882 ['PLCMDT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:06,534 
+1 Failed download:
+2025-07-06 18:51:06,534 ['PLCLIN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:07,461 
+1 Failed download:
+2025-07-06 18:51:07,461 ['CORPAPP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:09,680 Skipping invalid ticker: nan
+2025-07-06 18:51:11,131 Skipping invalid ticker: nan
+2025-07-06 18:51:12,130 
+1 Failed download:
+2025-07-06 18:51:12,131 ['SAABEV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:12,145 
+1 Failed download:
+2025-07-06 18:51:12,145 ['SAABEV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:14,163 
+1 Failed download:
+2025-07-06 18:51:14,163 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:14,178 
+1 Failed download:
+2025-07-06 18:51:14,178 ['SQ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:15,622 
+1 Failed download:
+2025-07-06 18:51:15,622 ['SADASTY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:18,276 
+1 Failed download:
+2025-07-06 18:51:18,276 ['AGIFNNY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:19,721 Skipping invalid ticker: nan
+2025-07-06 18:51:21,692 
+1 Failed download:
+2025-07-06 18:51:21,692 ['ASPOT']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:27,160 Skipping invalid ticker: nan
+2025-07-06 18:51:30,396 
+1 Failed download:
+2025-07-06 18:51:30,396 ['INCSTRL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:31,930 
+1 Failed download:
+2025-07-06 18:51:31,930 ['PLCWTW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:31,932 Skipping invalid ticker: nan
+2025-07-06 18:51:33,461 
+1 Failed download:
+2025-07-06 18:51:33,461 ['ETFIVW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:33,475 
+1 Failed download:
+2025-07-06 18:51:33,475 ['ETFIVW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:33,931 
+1 Failed download:
+2025-07-06 18:51:33,931 ['CMDFTGC']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:34,784 Skipping invalid ticker: nan
+2025-07-06 18:51:34,785 Skipping invalid ticker: nan
+2025-07-06 18:51:36,325 
+1 Failed download:
+2025-07-06 18:51:36,325 ['ETFTBLL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:39,217 
+1 Failed download:
+2025-07-06 18:51:39,217 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:40,170 
+1 Failed download:
+2025-07-06 18:51:40,170 ['CORPCEG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:41,241 Skipping invalid ticker: nan
+2025-07-06 18:51:41,243 Skipping invalid ticker: nan
+2025-07-06 18:51:41,977 
+1 Failed download:
+2025-07-06 18:51:41,978 ['LPNGL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:42,293 
+1 Failed download:
+2025-07-06 18:51:42,294 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:42,311 
+1 Failed download:
+2025-07-06 18:51:42,311 ['ETFBITB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:42,813 
+1 Failed download:
+2025-07-06 18:51:42,813 ['LPARLP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:43,078 
+1 Failed download:
+2025-07-06 18:51:43,078 ['LPET']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-02-19 00:00:00 -> 2025-03-11 00:00:00)')
+2025-07-06 18:51:43,094 
+1 Failed download:
+2025-07-06 18:51:43,094 ['LPNGL']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:43,975 
+1 Failed download:
+2025-07-06 18:51:43,975 ['PRMW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:46,564 
+1 Failed download:
+2025-07-06 18:51:46,565 ['ETFVAW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:47,278 
+1 Failed download:
+2025-07-06 18:51:47,278 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:49,495 
+1 Failed download:
+2025-07-06 18:51:49,495 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:50,872 Skipping invalid ticker: nan
+2025-07-06 18:51:50,873 Skipping invalid ticker: nan
+2025-07-06 18:51:54,056 
+1 Failed download:
+2025-07-06 18:51:54,056 ['CORPSOLV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:51:54,989 
+1 Failed download:
+2025-07-06 18:51:54,990 ['SKI']: YFPricesMissingError('possibly delisted; no price data found  (1d 2025-02-04 00:00:00 -> 2025-02-28 00:00:00)')
+2025-07-06 18:52:03,102 
+1 Failed download:
+2025-07-06 18:52:03,102 ['PLCDEO']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:04,071 
+1 Failed download:
+2025-07-06 18:52:04,071 ['ETFIBUY']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:04,581 
+1 Failed download:
+2025-07-06 18:52:04,581 ['ETFFLJP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:05,033 
+1 Failed download:
+2025-07-06 18:52:05,033 ['ETFURA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:05,038 Skipping invalid ticker: nan
+2025-07-06 18:52:05,456 
+1 Failed download:
+2025-07-06 18:52:05,456 ['ETFIGSB']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:05,898 
+1 Failed download:
+2025-07-06 18:52:05,898 ['ETFTLH']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:06,826 
+1 Failed download:
+2025-07-06 18:52:06,826 ['ETFITA']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:07,180 
+1 Failed download:
+2025-07-06 18:52:07,180 ['ETFZROZ']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:07,881 
+1 Failed download:
+2025-07-06 18:52:07,882 ['ETFSPDW']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:08,281 
+1 Failed download:
+2025-07-06 18:52:08,281 ['ETFSLYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:08,691 
+1 Failed download:
+2025-07-06 18:52:08,692 ['ETFSLYV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:09,092 
+1 Failed download:
+2025-07-06 18:52:09,092 ['ETFSPYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:09,745 
+1 Failed download:
+2025-07-06 18:52:09,745 ['ETFSPYV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:10,123 
+1 Failed download:
+2025-07-06 18:52:10,124 ['ETFMDYG']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:10,975 
+1 Failed download:
+2025-07-06 18:52:10,975 ['TRGLDM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:16,529 Skipping invalid ticker: nan
+2025-07-06 18:52:17,035 Skipping invalid ticker: nan
+2025-07-06 18:52:17,035 Skipping invalid ticker: nan
+2025-07-06 18:52:17,036 Skipping invalid ticker: nan
+2025-07-06 18:52:17,037 Skipping invalid ticker: nan
+2025-07-06 18:52:17,485 
+1 Failed download:
+2025-07-06 18:52:17,485 ['INCGEV']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:20,823 
+1 Failed download:
+2025-07-06 18:52:20,823 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:20,839 
+1 Failed download:
+2025-07-06 18:52:20,839 ['SESAP']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:26,033 
+1 Failed download:
+2025-07-06 18:52:26,033 ['BECN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:29,900 
+1 Failed download:
+2025-07-06 18:52:29,900 ['PLCACN']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:32,388 
+1 Failed download:
+2025-07-06 18:52:32,388 ['INCAPPF']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:33,039 
+1 Failed download:
+2025-07-06 18:52:33,039 ['PLCTEAM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:33,053 
+1 Failed download:
+2025-07-06 18:52:33,053 ['PLCTEAM']: YFTzMissingError('possibly delisted; no timezone found')
+2025-07-06 18:52:33,068 
+1 Failed download:
+2025-07-06 18:52:33,068 ['PLCTEAM']: YFTzMissingError('possibly delisted; no timezone found')
