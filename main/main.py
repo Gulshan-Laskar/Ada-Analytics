@@ -119,8 +119,9 @@ st.header("2. Capitol Trades Scraping & Processing")
 def run_capitol_trades():
     scrape_out = run_script(os.path.join(BASE_DIR, 'capitol trades', 'capitoltrades_scrape.py'))
     clean_out = run_script(os.path.join(BASE_DIR, 'capitol trades', 'capitoltrades_cleaning.py'))
-    final_out = run_script(os.path.join(BASE_DIR, 'capitol trades', 'capitoltrades_final.py'))
     signal_out = run_script(os.path.join(BASE_DIR, 'capitol trades', 'capitoltrades_signal.py'))
+    final_out = run_script(os.path.join(BASE_DIR, 'capitol trades', 'capitoltrades_final.py'))
+    
     return f"{scrape_out}\n{clean_out}\n{final_out}\n{signal_out}"
 
 if os.path.exists(r"capitol trades\trades_with_returns.csv"):

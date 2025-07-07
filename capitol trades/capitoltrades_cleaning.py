@@ -118,6 +118,6 @@ def clean_capitol_trades(file_path, output_path):
 
 # Example usage
 cleaned_df = clean_capitol_trades(
-    r'capitol_trades_data.csv',
-    r'cleaned_capitol_trades.csv'
+    r'capitol trades\capitol_trades_data.csv',
+    r'capitol trades\cleaned_capitol_trades.csv'
 )
