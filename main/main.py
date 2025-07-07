@@ -5,6 +5,83 @@ import schedule
 import time
 import pandas as pd
 
+# --- Page Configuration ---
+st.set_page_config(page_title="Ada Analytics Dashboard", page_icon=":bar_chart:", layout="wide")
+
+# --- Custom CSS Styling ---
+theme_choice = st.select_slider("Theme", ["Light Mode", "Dark Mode"], value="Dark Mode")
+
+if theme_choice == "Dark Mode":
+    st.markdown("""
+    <style>
+      /* position slider top-right */
+      [data-testid="stSelectSlider"] { position: absolute; top: 10px; right: 10px; max-width: 200px; }
+      /* make toolbar text visible */
+      [data-testid="stToolbar"] { color: #cfcfcf; }
+      /* app background & headings */
+      .stApp { background-color: #141414; color: #e0e0e0; }
+      h1,h2,h3 { color: #e0e0e0; font-family:'Poppins',sans-serif; }
+
+      /* slider container width */
+      [data-testid="stSelectSlider"] > div:first-child {
+        max-width: 240px;
+      }
+      /* track thickness */
+      [data-testid="stSelectSlider"] input[type="range"] {
+        height: 10px!important; background: #444;
+      }
+      /* thumb size & style */
+      [data-testid="stSelectSlider"] input[type="range"]::-webkit-slider-thumb {
+        width: 28px!important; height: 28px!important;
+        background: #666; border-radius:50%; position:relative;
+      }
+      /* thumb label showing current value */
+      [data-testid="stSelectSlider"] input[type="range"]::-webkit-slider-thumb::after {
+        content: attr(aria-valuetext);
+        position: absolute; top:50%; left:50%;
+        transform: translate(-50%,-50%);
+        color: #fff; font-size:10px; font-weight:bold;
+      }
+    </style>
+    """, unsafe_allow_html=True)
+else:
+    st.markdown("""
+    <style>
+      /* position slider top-right */
+      [data-testid="stSelectSlider"] { position: absolute; top: 10px; right: 10px; max-width: 200px; }
+      /* make toolbar text visible */
+      [data-testid="stToolbar"] { color: #333333; }
+      /* background & headings */
+      .stApp {
+        background: linear-gradient(to top right,#f0ffff,#ffe4e1);
+        color: #333333;
+      }
+      h1,h2,h3 { color: #2e3d49; font-family:'Poppins',sans-serif; }
+      .stDataFrame, .st-table { background:#fff; color:#333; }
+
+      /* slider container width */
+      [data-testid="stSelectSlider"] > div:first-child {
+        max-width: 240px;
+      }
+      /* track thickness */
+      [data-testid="stSelectSlider"] input[type="range"] {
+        height: 10px!important; background: #ccc;
+      }
+      /* thumb size & style */
+      [data-testid="stSelectSlider"] input[type="range"]::-webkit-slider-thumb {
+        width: 28px!important; height: 28px!important;
+        background: #888; border-radius:50%; position:relative;
+      }
+      /* thumb label showing current value */
+      [data-testid="stSelectSlider"] input[type="range"]::-webkit-slider-thumb::after {
+        content: attr(aria-valuetext);
+        position: absolute; top:50%; left:50%;
+        transform: translate(-50%,-50%);
+        color: #333; font-size:10px; font-weight:bold;
+      }
+    </style>
+    """, unsafe_allow_html=True)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 python_exe_venv = r'C:\Users\pusap\OneDrive\Desktop\Ada-Analytics\venv\Scripts\python.exe'
@@ -66,15 +143,15 @@ st.header("4. Yahoo Trend Analysis")
 def run_yahoo():
     return run_script(os.path.join(BASE_DIR, 'yahoo', 'Yfinance-web-scrape.py'))
 
-if os.path.exists(r"yahoo\yahoo_finance_most_active.csv"):
-    yahoo_df = pd.read_csv(r"yahoo\yahoo_finance_most_active.csv")
+if os.path.exists(r"yahoo\enriched_yahoo_data.csv"):
+    yahoo_df = pd.read_csv(r"yahoo\enriched_yahoo_data.csv")
     st.dataframe(yahoo_df)
 else:
     yahoo_out = run_yahoo()
     st.text_area("Yahoo Trend Analysis Output", yahoo_out, height=200)
-    with open("yahoo_finance_most_active.csv", "w") as f:
+    with open("enriched_yahoo_data.csv", "w") as f:
         f.write(yahoo_out)
-    yahoo_df2 = pd.read_csv("yahoo_finance_most_active.csv")
+    yahoo_df2 = pd.read_csv("enriched_yahoo_data.csv")
     st.dataframe(yahoo_df2)
 
 # # Capitol Trades Visual Output
@@ -94,7 +171,7 @@ def quarterly_13f():
     os.remove("13f_output.txt")
     run_script(os.path.join(BASE_DIR, '13F', '13F_filings_webscraping-2.py'))
 
-schedule.every().day.at("06:00").do(daily_tasks)
+schedule.every().day.at("08:00").do(daily_tasks)
 schedule.every(120).days.do(quarterly_13f)
 
 # Start scheduling in a thread or main loop as appropriate
