@@ -1,0 +1,4 @@
+ticker,total_posts,positive_posts,neutral_posts,negative_posts,avg_sentiment_score
+FMAO,1,1,0,0,0.8079
+SPG,100,81,5,14,0.613435
+UNH,100,59,20,21,0.253448
