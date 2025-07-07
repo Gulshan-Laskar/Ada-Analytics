@@ -83,7 +83,7 @@ import os
 
 # derive path to the trades CSV and read unique tickers once
 csv_path = os.path.join(os.path.dirname(os.path.dirname(__file__)),
-                        'capitol trades', 'trades_with_returns.csv')
+                        'capitol trades', 'filtered_trade_signals.csv')
 df = pd.read_csv(csv_path)
 tickers = df['Ticker'].dropna().unique().tolist()
 
