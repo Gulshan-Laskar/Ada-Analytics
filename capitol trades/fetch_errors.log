@@ -1,6 +1,0 @@
-2025-07-07 12:46:38,545 
-1 Failed download:
-2025-07-07 12:46:38,545 ['ITW']: ValueError('NaTType does not support timestamp')
-2025-07-07 12:46:40,652 
-1 Failed download:
-2025-07-07 12:46:40,652 ['ETFQQQM']: ConnectionError('Failed to perform, curl: (56) Recv failure: Connection was reset. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.')

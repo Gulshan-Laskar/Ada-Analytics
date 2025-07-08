@@ -136,7 +136,27 @@ else:
     st.dataframe(trades_df2)
 
 # 3. Reddit Sentiment & Trend Analysis
-# Exclude for now
+st.header("3. Reddit Sentiment & Trend Analysis")
+reddit_csv_path = r"Reddit\reddit_sentiment_summary_by_ticker.csv"
+if os.path.exists(reddit_csv_path):
+    reddit_df = pd.read_csv(reddit_csv_path)
+    st.dataframe(reddit_df)
+else:
+    # Run Reddit scraping and sentiment scripts if CSV not found
+    reddit_scrape_out = run_script(os.path.join(BASE_DIR, 'Reddit', 'reddit_scrapping_final.py'))
+    reddit_sentiment_out = run_script(os.path.join(BASE_DIR, 'Reddit', 'reddit_sentiment.py'))
+    st.text_area("Reddit Sentiment Output", reddit_sentiment_out, height=150)
+    # Write output to a file and load as DataFrame
+    with open("reddit_sentiment_output.csv", "w") as f:
+        f.write(reddit_sentiment_out)
+    if os.path.exists("reddit_sentiment_output.csv"):
+        reddit_df2 = pd.read_csv("reddit_sentiment_output.csv")
+        st.dataframe(reddit_df2)
+    # Check if the CSV exists after running scripts
+    elif os.path.exists(reddit_csv_path):
+        reddit_df = pd.read_csv(reddit_csv_path)
+        st.dataframe(reddit_df)
+  
 
 # 4. Yahoo Trend Analysis
 st.header("4. Yahoo Trend Analysis")
@@ -167,6 +187,11 @@ else:
 def daily_tasks():
     run_capitol_trades()
     run_yahoo()
+
+def run_reddit():
+    reddit_scrape_out = run_script(os.path.join(BASE_DIR, 'Reddit', 'reddit_scrapping_final.py'))
+    reddit_sentiment_out = run_script(os.path.join(BASE_DIR, 'Reddit', 'reddit_sentiment.py'))
+    return f"{reddit_scrape_out}\n{reddit_sentiment_out}"
 
 def quarterly_13f():
     os.remove("13f_output.txt")
