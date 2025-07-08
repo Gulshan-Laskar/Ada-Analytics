@@ -31,9 +31,10 @@ def add_trade_direction(df):
     return df
 
 # Load your cleaned data
-df = pd.read_csv(r'capitol trades\cleaned_capitol_trades.csv', parse_dates=['Traded', 'Published'])
-# ensure both are real Timestamps
-df['Traded']    = pd.to_datetime(df['Traded'], errors='coerce')
+df = pd.read_csv(r'capitol trades\cleaned_capitol_trades.csv')
+
+# ensure both columns are proper datetimes
+df['Traded']    = pd.to_datetime(df['Traded'],    errors='coerce')
 df['Published'] = pd.to_datetime(df['Published'], errors='coerce')
 
 df = add_trade_direction(df)
