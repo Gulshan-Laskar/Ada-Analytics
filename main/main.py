@@ -175,13 +175,28 @@ else:
     yahoo_df2 = pd.read_csv("enriched_yahoo_data.csv")
     st.dataframe(yahoo_df2)
 
-# # Capitol Trades Visual Output
-# st.header("Capitol Trades Visual Output")
-# csv_path = os.path.join(BASE_DIR, 'capitol trades', 'trades_with_returns.csv')
-# if os.path.exists(csv_path):
-#     data_df = pd.read_csv(csv_path)
-#     st.dataframe(data_df)
-#     st.line_chart(data_df['Value'])
+# 5. Capitol Trades Filtered Trade Signals
+st.header("5. Final Suggestions:Trade Signals")
+
+filtered_signals_path = r"capitol trades\filtered_trade_signals.csv"
+if os.path.exists(filtered_signals_path):
+    signals_df = pd.read_csv(filtered_signals_path)
+    if not signals_df.empty:
+        # Show only company name and last column (trade signal)
+        company_col = None
+        # Try common company name column names
+        for col in signals_df.columns:
+            if col.lower() in ["company", "company_name", "ticker", "name"]:
+                company_col = col
+                break
+        if company_col is None:
+            company_col = signals_df.columns[0]  # fallback to first column
+        last_col = signals_df.columns[-1]
+        st.dataframe(signals_df[[company_col, last_col]])
+    else:
+        st.info("No filtered trade signals found.")
+else:
+    st.warning("Filtered trade signals file not found.")
 
 # Schedule tasks
 def daily_tasks():
@@ -200,5 +215,4 @@ def quarterly_13f():
 schedule.every().day.at("08:00").do(daily_tasks)
 schedule.every(120).days.do(quarterly_13f)
 
-# Start scheduling in a thread or main loop as appropriate
-# (Might need special handling for Streamlit)
+
