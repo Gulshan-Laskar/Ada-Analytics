@@ -7,7 +7,7 @@ from nltk.sentiment.vader import SentimentIntensityAnalyzer
 nltk.download('vader_lexicon')
 
 # === Step 2: Load Reddit data ===
-input_file = "C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\reddit_posts_for_congressional_tickers.csv"
+input_file = r"capitol trades\reddit_posts_for_congressional_tickers.csv"
 df = pd.read_csv(input_file)
 
 # === Step 3: Combine title and selftext into one text field ===
@@ -29,7 +29,7 @@ def label_sentiment(score):
 df['sentiment_label'] = df['sentiment_score'].apply(label_sentiment)
 
 # === Step 6: Save post-level sentiment data ===
-post_output_file = "C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\reddit_posts_with_vader_sentiment.csv"
+post_output_file = r"Reddit/reddit_posts_with_vader_sentiment.csv"
 df.to_csv(post_output_file, index=False)
 print(f"✅ Post-level sentiment data saved to:\n{post_output_file}")
 
@@ -43,5 +43,5 @@ summary = df.groupby('ticker').agg(
 ).reset_index()
 
 # === Step 8: Save ticker-level sentiment summary ===
-summary_output_file = "C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\reddit_sentiment_summary_by_ticker.csv"
+summary_output_file = r"Reddit/reddit_sentiment_summary_by_ticker.csv"
 summary.to_csv(summary_output_file, index=False)

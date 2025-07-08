@@ -55,7 +55,7 @@ def get_reddit_posts_for_ticker(ticker, max_posts=post_limit_per_ticker):
 # === Step 4: Main Execution ===
 if __name__ == "__main__":
     # Load ticker list
-    ticker_list = load_custom_tickers("C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\filtered_trade_signals.csv")
+    ticker_list = load_custom_tickers(r"capitol trades\filtered_trade_signals.csv")
     print(f"✅ Loaded {len(ticker_list)} custom tickers: {ticker_list}")
 
     all_posts = []
@@ -69,6 +69,6 @@ if __name__ == "__main__":
     # Save to CSV
     if all_posts:
         df = pd.DataFrame(all_posts)
-        df.to_csv("C:\\Users\\india\\Desktop\\Ada Analytics\\Code\\Congressional Trade Scraper\\reddit_posts_for_congressional_tickers.csv", index=False)
+        df.to_csv(r"capitol trades\reddit_posts_for_congressional_tickers.csv", index=False)
     else:
         print("\n⚠️ No Reddit posts found for the provided tickers.")
