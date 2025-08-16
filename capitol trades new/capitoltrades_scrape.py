@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
@@ -132,5 +131,4 @@ for page in range(1, 500):
 # Save to CSV
 df = pd.DataFrame(data)
 df.to_csv(r"Ada-Analytics\capitol trades new\capitol_trades_data.csv", index=False)
->>>>>>> 02d397b609aa60a3641617ce607f2ae2fdcdb463
 print("Scraping completed and saved.")

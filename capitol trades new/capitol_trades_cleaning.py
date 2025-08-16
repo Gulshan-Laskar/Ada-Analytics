@@ -10,8 +10,8 @@ import numpy as np
 import pandas as pd
 from typing import Optional, Tuple, Dict, Any
 
-IN_PATH  = "/Users/navyasrichinthapatla/Documents/Ada Analytics/Fresh Start/Ada-Analytics/capitol trades new/capitol_trades_data.csv"
-OUT_PATH = "/Users/navyasrichinthapatla/Documents/Ada Analytics/Fresh Start/Ada-Analytics/capitol trades new/capitol_trades_clean.csv"
+IN_PATH  = r"Ada-Analytics/capitol trades new/capitol_trades_data.csv"
+OUT_PATH = r"Ada-Analytics/capitol trades new/capitol_trades_clean.csv"
 
 # ---------- Regex baselines
 POLI_RE = re.compile(
