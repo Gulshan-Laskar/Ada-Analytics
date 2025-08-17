@@ -84,7 +84,7 @@ else:
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-python_exe_venv = r'C:\Users\pusap\OneDrive\Desktop\Ada-Analytics\venv\Scripts\python.exe'
+python_exe_venv = r'Ada-Analytics\venv\Scripts\python.exe'
 if not os.path.exists(python_exe_venv):
     python_exe_venv = 'python'
 
