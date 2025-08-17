@@ -9,9 +9,12 @@ import re
 import numpy as np
 import pandas as pd
 from typing import Optional, Tuple, Dict, Any
+from pathlib import Path
 
-IN_PATH  = r"Ada-Analytics/capitol trades new/capitol_trades_data.csv"
-OUT_PATH = r"Ada-Analytics/capitol trades new/capitol_trades_clean.csv"
+# Robust, cross-platform paths
+BASE_DIR = Path(__file__).resolve().parent.parent
+IN_PATH  = BASE_DIR / "capitol trades new" / "capitol_trades_data.csv"
+OUT_PATH = BASE_DIR / "capitol trades new" / "capitol_trades_clean.csv"
 
 # ---------- Regex baselines
 POLI_RE = re.compile(
@@ -127,6 +130,8 @@ def safe_parse_issuer(s: Any) -> Tuple[Optional[str], Optional[str]]:
 
 # ---------- Main
 def main() -> None:
+    if not IN_PATH.exists():
+        raise FileNotFoundError(f"Input file not found: {IN_PATH}")
     df = pd.read_csv(IN_PATH)
 
     # Normalize column names
@@ -215,10 +220,11 @@ def main() -> None:
     df = df[front + others]
 
     # --- 12) Write output
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_PATH, index=False)
 
     # --- 13) Summary
-    print(f"✅ Wrote cleaned file: {OUT_PATH}")
+    print(f"Wrote cleaned file: {OUT_PATH}")
     print("Final rows:", len(df))
     print("Columns:", len(df.columns))
     print(f"Dropped rows with missing price: {dropped_price}")
