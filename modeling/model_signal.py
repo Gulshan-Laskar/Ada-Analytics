@@ -1,10 +1,11 @@
 import pandas as pd
 import numpy as np
+from pathlib import Path
 
-# ==== EDIT THESE PATHS ====
-INPUT_FILE = "/Users/navyasrichinthapatla/Documents/Ada Analytics/new/Ada-Analytics/data/master_dataset.csv"
-OUTPUT_FILE = "/Users/navyasrichinthapatla/Documents/Ada Analytics/new/Ada-Analytics/data/signals.csv"
-# ==========================
+# --- Configuration ---
+BASE_DIR = Path(__file__).resolve().parent.parent
+INPUT_FILE = BASE_DIR / "data" / "master_dataset.csv"
+OUTPUT_FILE = BASE_DIR / "data" / "signals.csv"
 
 # Load dataset
 df = pd.read_csv(INPUT_FILE)
@@ -13,13 +14,15 @@ df = pd.read_csv(INPUT_FILE)
 df["published_dt"] = pd.to_datetime(df["published_dt"], errors="coerce")
 
 # --- Fill missing tickers from ticker_original ---
-df["ticker"] = df["ticker"].fillna(df["ticker_original"])
+if 'ticker_original' in df.columns:
+    df["ticker"] = df["ticker"].fillna(df["ticker_original"])
 df["ticker"] = df["ticker"].astype(str).str.upper().str.strip()
 
 # --- Ensure numeric ---
 for col in ["size_avg_usd", "trade_size_vs_market_cap", "sentiment_score",
             "mention_count", "volume_spike_ratio", "consensus_score_7d"]:
-    df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
+    if col in df.columns:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
 
 # --- Simple thresholds ---
 recent_disclosure = (df["published_dt"].max() - df["published_dt"]).dt.days <= 14
@@ -40,5 +43,7 @@ signal = recent_disclosure & big_trade & (
 df["signal_strength"] = np.where(signal, 1, 0)
 
 # --- Save ALL rows ---
+OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(OUTPUT_FILE, index=False)
 
+print(f"--- Signals generated successfully. Output saved to {OUTPUT_FILE} ---")
