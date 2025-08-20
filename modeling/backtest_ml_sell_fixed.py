@@ -1,7 +1,5 @@
 # modeling/backtest_ml_sell_fixed.py
-# Fixed ML-entry + TP/SL exit backtest (no sweep).
-# Paths are repo-relative. Price cache stored at data/price_cache.pkl.
-#
+# Fixed ML-entry + TP/SL exit backtest (no sweep) with robust price cache repair.
 # Run:
 #   cd <repo-root>
 #   python -m modeling.backtest_ml_sell_fixed
@@ -14,8 +12,8 @@ import pickle
 import sys
 
 # ----------------- Repo paths -----------------
-HERE = Path(__file__).resolve()
-ROOT = HERE.parent.parent                # repo root
+BASE_DIR = Path(__file__).resolve().parent.parent
+ROOT = BASE_DIR.parent.parent                # repo root
 DATA = ROOT / "data"
 
 SCORED_FILE = DATA / "scored_test.csv"   # needs: published_dt, ticker, proba_best
@@ -25,24 +23,22 @@ PRICE_CACHE = DATA / "price_cache.pkl"
 # ----------------------------------------------
 
 # ------------- Your locked settings -----------
-FILTER_MODE       = "threshold"   # only threshold used here
-PROBA_THRESHOLD   = 0.75
-EXIT_MODE         = "tp_sl"       # "tp_sl" only in this fixed file
-HOLDING_DAYS      = 7
-TP_PCT            = 0.08
-SL_PCT            = 0.05
-TP_FIRST          = True          # check TP before SL each day
-COST_BPS          = 10
-MAX_POS_PER_DAY   = None          # set int to cap positions per day, or None
+PROBA_THRESHOLD = 0.75
+HOLDING_DAYS    = 7
+TP_PCT          = 0.08
+SL_PCT          = 0.05
+TP_FIRST        = True
+COST_BPS        = 10
+MAX_POS_PER_DAY = None   # e.g., 10 to cap per day; None = no cap
 # ----------------------------------------------
 
 def _scalar(v):
-    """Coerce a cell (scalar/Series) to finite positive float or None."""
+    """Coerce a cell (scalar/Series) to finite float or None."""
     if isinstance(v, pd.Series):
         v = v.iloc[0] if len(v) else np.nan
     try:
         f = float(v)
-        return f if np.isfinite(f) and f > 0 else None
+        return f if np.isfinite(f) else None
     except Exception:
         return None
 
@@ -56,9 +52,7 @@ def load_scored(path: Path) -> pd.DataFrame:
     df["published_dt"] = pd.to_datetime(df["published_dt"], errors="coerce")
     df["ticker"] = df["ticker"].astype(str).str.upper().str.strip()
     df = df.dropna(subset=["published_dt", "ticker", "proba_best"])
-    # dedupe per (ticker, disclosure)
     df = df.drop_duplicates(subset=["ticker","published_dt"]).sort_values("published_dt").reset_index(drop=True)
-    # entry filter
     df = df[df["proba_best"] >= PROBA_THRESHOLD].copy()
     if MAX_POS_PER_DAY is not None:
         df = (df.sort_values(["published_dt","proba_best"], ascending=[True,False])
@@ -66,57 +60,90 @@ def load_scored(path: Path) -> pd.DataFrame:
                 .reset_index(drop=True))
     return df
 
-def fetch_prices_yf(tickers, start, end):
-    """Download daily OHLC per ticker with buffers; dedupe & sanitize."""
-    start_buf = start - pd.Timedelta(days=10)
-    end_buf   = end + pd.Timedelta(days=10)
-    data = {}
-    for t in sorted(set(tickers)):
-        try:
-            hist = yf.download(
-                t,
-                start=start_buf.strftime("%Y-%m-%d"),
-                end=end_buf.strftime("%Y-%m-%d"),
-                interval="1d",
-                progress=False,
-                auto_adjust=False,
-                actions=False,
-            )
-            if not hist.empty:
-                px = hist[["Open","High","Low","Close"]].copy()
-                px.index = pd.to_datetime(px.index, errors="coerce")
-                if getattr(px.index, "tz", None) is not None:
-                    px.index = px.index.tz_localize(None)
-                px = px[~px.index.isna()]
-                px = px.groupby(level=0).first().sort_index()
-                data[t] = px
-        except Exception as e:
-            print(f"[WARN] Failed {t}: {e}")
-    return data
+def ensure_ohlc(df: pd.DataFrame) -> pd.DataFrame:
+    """Ensure columns Open/High/Low/Close exist. If missing, synthesize conservatively."""
+    cols = df.columns
+    out = df.copy()
+    # If only 'Adj Close' present (rare), fall back to 'Close'
+    if "Close" not in cols and "Adj Close" in cols:
+        out["Close"] = out["Adj Close"]
+    if "Open" not in out.columns and "Close" in out.columns:
+        out["Open"] = out["Close"]
+    if "High" not in out.columns and "Close" in out.columns:
+        out["High"] = out["Close"]
+    if "Low" not in out.columns and "Close" in out.columns:
+        out["Low"] = out["Close"]
+    # Keep only needed columns
+    keep = [c for c in ["Open","High","Low","Close"] if c in out.columns]
+    out = out[keep].copy()
+    out.index = pd.to_datetime(out.index, errors="coerce")
+    if getattr(out.index, "tz", None) is not None:
+        out.index = out.index.tz_localize(None)
+    out = out[~out.index.isna()]
+    return out.groupby(level=0).first().sort_index()
+
+def yf_fetch_one(ticker: str, start: pd.Timestamp, end: pd.Timestamp) -> pd.DataFrame | None:
+    try:
+        hist = yf.download(
+            ticker,
+            start=(start - pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
+            end=(end + pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
+            interval="1d",
+            progress=False,
+            auto_adjust=False,
+            actions=False,
+        )
+        if hist is None or hist.empty:
+            return None
+        return ensure_ohlc(hist)
+    except Exception:
+        return None
 
 def load_or_build_price_cache(tickers, start, end) -> dict:
-    cache = {}
+    """Load cache; refetch missing or malformed (no High/Low) tickers; repair if needed."""
+    cache: dict[str, pd.DataFrame] = {}
     if PRICE_CACHE.exists():
         try:
             with open(PRICE_CACHE, "rb") as fh:
                 cache = pickle.load(fh)
         except Exception:
             cache = {}
+
     need = set(map(str.upper, tickers))
     have = set(cache.keys())
-    missing = sorted(list(need - have))
-    if missing:
-        fresh = fetch_prices_yf(missing, start, end)
-        cache.update(fresh)
+    to_check = sorted(list(need))
+    updated = 0
+
+    for t in to_check:
+        df = cache.get(t)
+        if df is None or not isinstance(df, pd.DataFrame) or not {"Open","High","Low","Close"}.issubset(df.columns):
+            # refetch from Yahoo
+            refetched = yf_fetch_one(t, start, end)
+            if refetched is not None and not refetched.empty:
+                cache[t] = refetched
+                updated += 1
+            else:
+                # last resort: if we had any df, synthesize; else store empty
+                if isinstance(df, pd.DataFrame) and not df.empty:
+                    cache[t] = ensure_ohlc(df)
+                else:
+                    cache[t] = pd.DataFrame(columns=["Open","High","Low","Close"])
+
+    if updated > 0 or not PRICE_CACHE.exists():
         try:
             PRICE_CACHE.parent.mkdir(parents=True, exist_ok=True)
             with open(PRICE_CACHE, "wb") as fh:
                 pickle.dump(cache, fh)
-            print(f"[OK] Updated price cache → {PRICE_CACHE} (+{len(fresh)} tickers)")
+            print(f"[OK] Price cache repaired/updated (+{updated}) -> {PRICE_CACHE}")
         except Exception as e:
             print(f"[WARN] Could not write price cache: {e}")
     else:
         print(f"[OK] Using cached prices ({len(cache)} tickers) -> {PRICE_CACHE}")
+
+    # Final sanitize all frames
+    for t in list(cache.keys()):
+        cache[t] = ensure_ohlc(cache[t])
+
     return cache
 
 def next_trading_day(idx: pd.DatetimeIndex, after: pd.Timestamp):
@@ -125,9 +152,13 @@ def next_trading_day(idx: pd.DatetimeIndex, after: pd.Timestamp):
 
 def exit_tp_sl(px: pd.DataFrame, entry_dt, entry_open, holding_days, tp_pct, sl_pct, tp_first=True):
     """Intraday TP/SL using High/Low; else exit at time."""
+    if px is None or px.empty or not {"High","Low","Close"}.issubset(px.columns):
+        return None
     tp_level = entry_open * (1 + tp_pct)
     sl_level = entry_open * (1 - sl_pct)
     all_dates = px.index
+    if entry_dt not in all_dates:
+        return None
     pos0 = all_dates.get_loc(entry_dt)
     pos1 = min(pos0 + holding_days - 1, len(all_dates) - 1)
 
@@ -151,7 +182,7 @@ def exit_tp_sl(px: pd.DataFrame, entry_dt, entry_open, holding_days, tp_pct, sl_
     return exit_dt, exit_close, "time_exit"
 
 def simulate_trade(px: pd.DataFrame, published_dt: pd.Timestamp):
-    """Buy next trading day OPEN; exit via TP/SL or time with costs deducted."""
+    """Buy next trading day OPEN; exit via TP/SL or time; subtract costs."""
     if px is None or px.empty:
         return None
     entry_dt = next_trading_day(px.index, published_dt)
@@ -163,7 +194,27 @@ def simulate_trade(px: pd.DataFrame, published_dt: pd.Timestamp):
 
     res = exit_tp_sl(px, entry_dt, entry_open, HOLDING_DAYS, TP_PCT, SL_PCT, TP_FIRST)
     if res is None:
-        return None
+        # If TP/SL unavailable (e.g., missing High/Low), fall back to time exit on HOLDING_DAYS
+        # using Close; this keeps the backtest running conservatively.
+        all_dates = px.index
+        pos0 = all_dates.get_loc(entry_dt)
+        pos1 = min(pos0 + HOLDING_DAYS - 1, len(all_dates) - 1)
+        exit_dt = all_dates[pos1]
+        exit_close = _scalar(px.loc[exit_dt, "Close"])
+        if exit_close is None:
+            return None
+        gross = (exit_close - entry_open) / entry_open
+        net = gross - (COST_BPS / 10000.0)
+        return {
+            "entry_date": entry_dt,
+            "entry_price": float(entry_open),
+            "exit_date": exit_dt,
+            "exit_price": float(exit_close),
+            "gross_return": float(gross),
+            "net_return": float(net),
+            "exit_reason": "time_exit_fallback",
+            "holding_days": (exit_dt - entry_dt).days + 1
+        }
 
     exit_dt, exit_price, reason = res
     gross = (exit_price - entry_open) / entry_open
@@ -183,7 +234,6 @@ def main():
     selected = load_scored(SCORED_FILE)
     if selected.empty:
         print("[ERROR] No rows pass threshold filter.")
-        # still write empty outputs for robustness
         pd.DataFrame().to_csv(TRADES_OUT, index=False)
         pd.DataFrame().to_csv(SUMMARY_OUT, index=False)
         return
@@ -204,7 +254,6 @@ def main():
     TRADES_OUT.parent.mkdir(parents=True, exist_ok=True)
     trades.to_csv(TRADES_OUT, index=False)
 
-    # ---- summary ----
     n = len(trades)
     if n > 0:
         wr = (trades["net_return"] > 0).mean()
@@ -223,9 +272,8 @@ def main():
         "median_trade_return": round(float(med), 6) if pd.notna(med) else np.nan,
         "sharpe_per_trade": round(float(sharpe), 6) if pd.notna(sharpe) else np.nan,
         "total_return_sum": round(float(tot), 6) if pd.notna(tot) else np.nan,
-        "filter_mode": FILTER_MODE,
         "proba_threshold": PROBA_THRESHOLD,
-        "exit_mode": EXIT_MODE,
+        "exit_mode": "tp_sl",
         "holding_days": HOLDING_DAYS,
         "tp_pct": TP_PCT,
         "sl_pct": SL_PCT,

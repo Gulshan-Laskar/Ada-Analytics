@@ -30,23 +30,11 @@ st.markdown("---")
 with st.sidebar:
     st.header("⚙️ Controls")
     
-    # This list has been updated with your new filenames and execution order.
     pipeline_scripts = [
-        # Scraping
-        (SCRAPERS_DIR / "capitoltrades_scrape.py"),
-        (SCRAPERS_DIR / "yahoo_scrape.py"),
-        (SCRAPERS_DIR / "reddit_scrapping.py"),
-        # Processing
-        (PROCESSING_DIR / "enrich_data.py"),
-        (PROCESSING_DIR / "engineer_features.py"),
-        (PROCESSING_DIR / "assemble_master_dataset.py"),
-        # Modeling & Backtesting
-        (MODELING_DIR / "model_signal.py"),
-        (MODELING_DIR / "backtesting.py"),
-        (MODELING_DIR / "cohort_diagnostics.py"),
-        (MODELING_DIR / "ml_ready_output.py"),
-        (MODELING_DIR / "ml_trainer.py"),
-        (MODELING_DIR / "backtest_ml_threshold.py"),
+        (SCRAPERS_DIR / "capitoltrades_scrape.py"), (SCRAPERS_DIR / "yahoo_scrape.py"), (SCRAPERS_DIR / "reddit_scrapping.py"),
+        (PROCESSING_DIR / "enrich_data.py"), (PROCESSING_DIR / "engineer_features.py"), (PROCESSING_DIR / "assemble_master_dataset.py"),
+        (MODELING_DIR / "model_signal.py"), (MODELING_DIR / "backtesting.py"), (MODELING_DIR / "cohort_diagnostics.py"),
+        (MODELING_DIR / "ml_ready_output.py"), (MODELING_DIR / "ml_trainer.py"), (MODELING_DIR / "backtest_ml_threshold.py"),
         (MODELING_DIR / "today_suggestions.py")
     ]
 
@@ -62,69 +50,53 @@ with st.sidebar:
             st.info("All script files found. Starting pipeline...")
             log_area = st.empty()
             log_messages = []
-
             for script_path in pipeline_scripts:
                 log_messages.append(f"Running: {script_path.name}...")
                 log_area.info("\n".join(log_messages))
-                
                 try:
                     process = subprocess.run(
                         [sys.executable, str(script_path)],
-                        capture_output=True, text=True, check=True,
-                        cwd=BASE_DIR, env=os.environ
+                        capture_output=True, text=True, check=True, cwd=BASE_DIR, env=os.environ
                     )
                     log_messages.append(f"✅ Success: {script_path.name}")
                     log_area.info("\n".join(log_messages))
-
                 except subprocess.CalledProcessError as e:
                     log_messages.append(f"❌ ERROR in {script_path.name}")
-                    st.error(f"Error running {script_path.name}:")
-                    st.code(e.stderr)
-                    st.stop()
-
+                    st.error(f"Error running {script_path.name}:"); st.code(e.stderr); st.stop()
             log_messages.append("\n🎉 Pipeline finished successfully!")
-            log_area.success("\n".join(log_messages))
-            st.rerun()
+            log_area.success("\n".join(log_messages)); st.rerun()
 
     st.markdown("---")
     st.header("🧹 Maintenance")
     if st.button("Clear All Data & Models"):
-        if "confirm_delete" not in st.session_state:
-            st.session_state.confirm_delete = True
-        
+        if "confirm_delete" not in st.session_state: st.session_state.confirm_delete = True
         if st.session_state.get("confirm_delete"):
             if st.button("Are you sure?", type="primary"):
-                # Clear suggestions directory
                 if SUGGESTIONS_DIR.exists():
-                    for f in SUGGESTIONS_DIR.glob("*.csv"):
-                        os.remove(f)
-                # Clear main data directory
+                    for f in SUGGESTIONS_DIR.glob("*.csv"): os.remove(f)
                 for f in DATA_DIR.glob("*.*"):
                     if f.is_file():
                         try: os.remove(f)
                         except OSError as e: st.warning(f"Could not remove {f}: {e}")
                 st.success("All data files and models have been deleted.")
-                st.session_state.confirm_delete = False
-                st.rerun()
+                st.session_state.confirm_delete = False; st.rerun()
 
 # --- Display Results ---
-st.header("🎯 Latest Suggestions (Correctly Predicted Positives)")
+st.header("🎯 Latest Suggestions (Predicted Positives)")
 
-# Use the scored_test file which contains the y_true column
-suggestions_file = DATA_DIR / "scored_test.csv"
-if suggestions_file.exists():
+# Find the most recent suggestions file from the `7_today_suggestions.py` script
+suggestion_files = glob.glob(str(SUGGESTIONS_DIR / "suggestions_*.csv"))
+if suggestion_files:
     try:
-        suggestions_df = pd.read_csv(suggestions_file)
+        latest_suggestion_file = max(suggestion_files, key=os.path.getctime)
+        suggestions_df = pd.read_csv(latest_suggestion_file)
         
         # Filter for y_true == 1 (correctly predicted positive trades)
         successful_predictions = suggestions_df[suggestions_df['y_true'] == 1].copy()
         
         if not successful_predictions.empty:
             # Define columns to display, excluding published_dt and y_true for a cleaner view
-            display_cols = ['ticker', 'proba_best', 'proba_logreg', 'proba_gboost']
-            # Ensure the columns exist before trying to display them
-            display_cols = [col for col in display_cols if col in successful_predictions.columns]
-            
+            display_cols = ['ticker', 'proba_best']
             st.dataframe(successful_predictions[display_cols])
             
             st.download_button(
@@ -134,13 +106,12 @@ if suggestions_file.exists():
                 mime='text/csv',
             )
         else:
-            st.info("No successful predictions (y_true = 1) were found in the latest test set.")
+            st.info("No successful predictions (y_true = 1) were found in the latest suggestions.")
 
     except Exception as e:
         st.error(f"An error occurred while loading suggestions: {e}")
 else:
     st.info("No suggestion file found. Run the pipeline to generate the latest suggestions.")
-
 
 st.markdown("---")
 st.header("🤖 Model Performance")
