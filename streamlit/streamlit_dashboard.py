@@ -5,6 +5,7 @@ import subprocess
 import sys
 import os
 import glob
+import json
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -107,39 +108,60 @@ with st.sidebar:
                 st.rerun()
 
 # --- Display Results ---
-st.header("🎯 Latest Suggestions")
+st.header("🎯 Latest Suggestions (Correctly Predicted Positives)")
 
-# Find the most recent suggestions file
-suggestion_files = glob.glob(str(SUGGESTIONS_DIR / "suggestions_*.csv"))
-if suggestion_files:
-    latest_suggestion_file = max(suggestion_files, key=os.path.getctime)
-    suggestions_df = pd.read_csv(latest_suggestion_file)
-    
-    if not suggestions_df.empty:
-        st.dataframe(suggestions_df)
+# Use the scored_test file which contains the y_true column
+suggestions_file = DATA_DIR / "scored_test.csv"
+if suggestions_file.exists():
+    try:
+        suggestions_df = pd.read_csv(suggestions_file)
         
-        st.download_button(
-            label="Download Suggestions as CSV",
-            data=suggestions_df.to_csv(index=False).encode('utf-8'),
-            file_name='latest_suggestions.csv',
-            mime='text/csv',
-        )
-    else:
-        st.info("The latest suggestion file is empty. No trades met the criteria.")
+        # Filter for y_true == 1 (correctly predicted positive trades)
+        successful_predictions = suggestions_df[suggestions_df['y_true'] == 1].copy()
+        
+        if not successful_predictions.empty:
+            # Define columns to display, excluding published_dt and y_true for a cleaner view
+            display_cols = ['ticker', 'proba_best', 'proba_logreg', 'proba_gboost']
+            # Ensure the columns exist before trying to display them
+            display_cols = [col for col in display_cols if col in successful_predictions.columns]
+            
+            st.dataframe(successful_predictions[display_cols])
+            
+            st.download_button(
+                label="Download Suggestions as CSV",
+                data=successful_predictions[display_cols].to_csv(index=False).encode('utf-8'),
+                file_name='latest_suggestions.csv',
+                mime='text/csv',
+            )
+        else:
+            st.info("No successful predictions (y_true = 1) were found in the latest test set.")
 
+    except Exception as e:
+        st.error(f"An error occurred while loading suggestions: {e}")
 else:
-    st.info("No suggestion files found. Run the pipeline to generate the latest suggestions.")
+    st.info("No suggestion file found. Run the pipeline to generate the latest suggestions.")
+
 
 st.markdown("---")
-st.header("📈 Latest Backtest Results")
+st.header("🤖 Model Performance")
 
-summary_file = DATA_DIR / "backtest_summary_ml.csv"
-if summary_file.exists():
+metrics_file = DATA_DIR / "metrics.json"
+if metrics_file.exists():
     try:
-        summary_df = pd.read_csv(summary_file)
-        st.subheader("ML Backtest Summary")
-        st.dataframe(summary_df)
+        with open(metrics_file, 'r') as f:
+            metrics_data = json.load(f)
+        
+        st.metric(label="Best Performing Model", value=metrics_data.get('best_model', 'N/A').upper())
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.subheader("Logistic Regression Metrics")
+            st.json(metrics_data.get('logreg', {}))
+        with col2:
+            st.subheader("Gradient Boosting Metrics")
+            st.json(metrics_data.get('gboost', {}))
+
     except Exception as e:
-        st.error(f"Could not load backtest summary: {e}")
+        st.error(f"Could not load model metrics: {e}")
 else:
-    st.warning("No backtest summary found.")
+    st.warning("No model performance metrics found.")
