@@ -37,7 +37,8 @@ def main():
     }
     for col, fname in cohorts.items():
         if col in df.columns:
-            df.groupby(col).apply(summarize).sort_values(["sharpe","trades"], ascending=False).to_csv(OUT_DIR / fname)
+            # The include_groups=False argument resolves the FutureWarning
+            df.groupby(col).apply(summarize, include_groups=False).sort_values(["sharpe","trades"], ascending=False).to_csv(OUT_DIR / fname)
             print(f"[OK] Wrote cohort analysis: {OUT_DIR / fname}")
 
     # --- Run diagnostics by feature bins ---
@@ -51,7 +52,7 @@ def main():
         if col in df.columns:
             bin_col_name = f"{col}_bin"
             df[bin_col_name] = qbin(df[col])
-            df.groupby(bin_col_name).apply(summarize).sort_index().to_csv(OUT_DIR / fname)
+            df.groupby(bin_col_name).apply(summarize, include_groups=False).sort_index().to_csv(OUT_DIR / fname)
             print(f"[OK] Wrote binned analysis: {OUT_DIR / fname}")
 
 if __name__ == "__main__":

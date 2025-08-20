@@ -81,10 +81,14 @@ def main():
     if OUTPUT_PATH.exists():
         print(f"Loading existing cache from {OUTPUT_PATH}...")
         cached_df = pd.read_csv(OUTPUT_PATH)
-        # Create a lookup dictionary from the cache for already processed tickers
+        
+        # --- FIX: Drop duplicate tickers before creating the cache dictionary ---
         cached_df.dropna(subset=['ticker'], inplace=True)
+        cached_df.drop_duplicates(subset=['ticker'], keep='first', inplace=True)
+        
+        # Create a lookup dictionary from the cache for already processed tickers
         processed_tickers_cache = cached_df.set_index('ticker')[['market_cap', 'sector']].to_dict('index')
-        print(f"Found {len(processed_tickers_cache)} tickers in cache.")
+        print(f"Found {len(processed_tickers_cache)} unique tickers in cache.")
 
     # Determine which tickers are new and need to be fetched
     all_unique_tickers = df['ticker'].dropna().unique()

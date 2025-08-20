@@ -2,14 +2,46 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 from pathlib import Path
+import pickle
 
 # --- Configuration ---
 BASE_DIR = Path(__file__).resolve().parent.parent
 SIGNALS_FILE = BASE_DIR / "data" / "signals.csv"
 TRADES_OUT = BASE_DIR / "data" / "trades_backtest.csv"
 SUMMARY_OUT = BASE_DIR / "data" / "backtest_summary.csv"
+PRICE_CACHE_FILE = BASE_DIR / "data" / "price_cache.pkl"
 HOLDING_DAYS = 5
 COST_BPS = 10
+
+def load_price_cache():
+    if PRICE_CACHE_FILE.exists():
+        with open(PRICE_CACHE_FILE, 'rb') as f:
+            return pickle.load(f)
+    return {}
+
+def save_price_cache(cache):
+    with open(PRICE_CACHE_FILE, 'wb') as f:
+        pickle.dump(cache, f)
+
+def update_price_cache(tickers, start, end, cache):
+    tickers_to_fetch = [t for t in tickers if t not in cache]
+    if not tickers_to_fetch:
+        print("All required prices found in cache.")
+        return cache
+
+    print(f"Fetching prices for {len(tickers_to_fetch)} new tickers...")
+    data = yf.download(tickers_to_fetch, start=start, end=end, progress=False, auto_adjust=False, actions=False, interval="1d", group_by='ticker')
+    
+    for t in tickers_to_fetch:
+        try:
+            hist = data[t] if len(tickers_to_fetch) > 1 else data
+            if not hist.empty:
+                hist = hist[["Open","Close"]].dropna()
+                hist.index = pd.to_datetime(hist.index)
+                cache[t] = hist.groupby(level=0).first().sort_index()
+        except KeyError:
+            print(f"[WARN] No data returned for {t}")
+    return cache
 
 def load_signals(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
@@ -17,20 +49,6 @@ def load_signals(path: Path) -> pd.DataFrame:
     df["ticker"] = df["ticker"].astype(str).str.upper().str.strip()
     df.dropna(subset=["published_dt", "ticker"], inplace=True)
     return df.drop_duplicates(subset=["ticker", "published_dt"]).reset_index(drop=True)
-
-def fetch_prices(tickers: list[str], start: pd.Timestamp, end: pd.Timestamp) -> dict:
-    start_buf, end_buf = start - pd.Timedelta(days=10), end + pd.Timedelta(days=10)
-    data = {}
-    for t in sorted(set(tickers)):
-        try:
-            hist = yf.download(t, start=start_buf, end=end_buf, progress=False, auto_adjust=False, actions=False, interval="1d")
-            if not hist.empty:
-                hist = hist[["Open","Close"]].copy()
-                hist.index = pd.to_datetime(hist.index)
-                data[t] = hist.groupby(level=0).first().sort_index()
-        except Exception as e:
-            print(f"[WARN] Failed to fetch {t}: {e}")
-    return data
 
 def next_trading_day(prices: pd.DataFrame, after_date: pd.Timestamp) -> pd.Timestamp | None:
     pos = prices.index.searchsorted(after_date + pd.Timedelta(days=1))
@@ -47,13 +65,13 @@ def simulate_trade_time_exit(prices: pd.DataFrame, signal_date: pd.Timestamp) ->
     if prices is None or prices.empty: return {"skipped": True, "reason": "no_prices"}
     entry_date = next_trading_day(prices, signal_date)
     if entry_date is None: return {"skipped": True, "reason": "no_entry"}
-    entry_open = _scalar(prices.loc[entry_date, "Open"])
+    entry_open = _scalar(prices.get("Open", {}).get(entry_date))
     if entry_open is None: return {"skipped": True, "reason": "bad_entry_price"}
     
     start_pos = prices.index.get_loc(entry_date)
     exit_pos = min(start_pos + HOLDING_DAYS - 1, len(prices.index) - 1)
     exit_date = prices.index[exit_pos]
-    exit_close = _scalar(prices.loc[exit_date, "Close"])
+    exit_close = _scalar(prices.get("Close", {}).get(exit_date))
     if exit_close is None: return {"skipped": True, "reason": "bad_exit_price"}
 
     gross_ret = (exit_close - entry_open) / entry_open
@@ -70,10 +88,13 @@ def main():
         print("[ERROR] No signals found."); return
 
     min_dt, max_dt = signals["published_dt"].min(), signals["published_dt"].max()
-    prices_map = fetch_prices(signals["ticker"].tolist(), min_dt, max_dt)
+    
+    price_cache = load_price_cache()
+    price_cache = update_price_cache(sorted(signals["ticker"].unique()), min_dt - pd.Timedelta(days=15), max_dt + pd.Timedelta(days=15), price_cache)
+    save_price_cache(price_cache)
 
     rows = [
-        {"ticker": r["ticker"], "published_dt": r["published_dt"], **simulate_trade_time_exit(prices_map.get(r["ticker"]), r["published_dt"])}
+        {"ticker": r["ticker"], "published_dt": r["published_dt"], **simulate_trade_time_exit(price_cache.get(r["ticker"]), r["published_dt"])}
         for _, r in signals.iterrows()
     ]
     
