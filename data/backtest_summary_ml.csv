@@ -1,2 +1,2 @@
-trades,win_rate,avg_trade_return,median_trade_return,sharpe_per_trade,total_return_sum,proba_threshold,exit_mode,holding_days,tp_pct,sl_pct,cost_bps
-46,0.6522,0.01099,0.007704,0.167395,0.505536,0.75,tp_sl,7,0.08,0.05,10
+trades,win_rate,avg_trade_return,sharpe_per_trade,holding_days,cost_bps,proba_threshold
+13,0.7692307692307693,0.03201724509858863,0.4900184323872127,5,10,0.7

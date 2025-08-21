@@ -1,7 +1,7 @@
 {
   "target": "fwd_5d_ret",
-  "n_train": 2000,
-  "n_test": 501,
+  "n_train": 1730,
+  "n_test": 433,
   "features_numeric": [
     "size_avg_usd",
     "trade_size_vs_market_cap",
@@ -17,44 +17,44 @@
     "sector"
   ],
   "logreg": {
-    "roc_auc": 0.4700055169728045,
-    "pr_auc": 0.5434080455887497,
-    "accuracy": 0.437125748502994,
-    "precision": 0.5111111111111111,
-    "recall": 0.1619718309859155,
-    "threshold": 0.5,
-    "confusion_matrix": [
-      [
-        173,
-        44
-      ],
-      [
-        238,
-        46
-      ]
-    ],
-    "positives": 284,
-    "negatives": 217
-  },
-  "gboost": {
-    "roc_auc": 0.5030749010190173,
-    "pr_auc": 0.5730168238944167,
-    "accuracy": 0.4870259481037924,
-    "precision": 0.5971223021582733,
-    "recall": 0.29225352112676056,
+    "roc_auc": 0.4843498323973706,
+    "pr_auc": 0.5759262345899214,
+    "accuracy": 0.44803695150115475,
+    "precision": 0.5689655172413793,
+    "recall": 0.13360323886639677,
     "threshold": 0.5,
     "confusion_matrix": [
       [
         161,
-        56
+        25
       ],
       [
-        201,
-        83
+        214,
+        33
       ]
     ],
-    "positives": 284,
-    "negatives": 217
+    "positives": 247,
+    "negatives": 186
+  },
+  "gboost": {
+    "roc_auc": 0.5110683035131252,
+    "pr_auc": 0.6050452937495203,
+    "accuracy": 0.47344110854503463,
+    "precision": 0.620253164556962,
+    "recall": 0.19838056680161945,
+    "threshold": 0.5,
+    "confusion_matrix": [
+      [
+        156,
+        30
+      ],
+      [
+        198,
+        49
+      ]
+    ],
+    "positives": 247,
+    "negatives": 186
   },
   "best_model": "gboost"
 }

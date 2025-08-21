@@ -136,3 +136,5 @@ if metrics_file.exists():
         st.error(f"Could not load model metrics: {e}")
 else:
     st.warning("No model performance metrics found.")
+
+st.sidebar.write(f"Python executable: {sys.executable}")

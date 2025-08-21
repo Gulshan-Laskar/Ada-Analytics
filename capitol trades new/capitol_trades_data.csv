@@ -1,20 +1,36 @@
 Politician,Issuer,Published,Traded,Filed After,Owner,Type,Size,Price,Detail URL
-Kelly MorrisonDemocratHouseMN,TREE CARE PARTNERSN/A,13:05Today,7 Aug2025,days12,Undisclosed,buy,50K–100K,N/A,https://www.capitoltrades.com/politicians/M001234
-Rudy YakymRepublicanHouseIN,US TREASURY BILLSN/A,13:05Yesterday,18 Aug2025,days0,Undisclosed,buy,15K–50K,N/A,https://www.capitoltrades.com/politicians/Y000067
-Debbie Wasserman SchultzDemocratHouseFL,Stratasys LtdSSYS:US,13:05Yesterday,15 Aug2025,days3,Child,buy,1K–15K,$9.40,https://www.capitoltrades.com/politicians/W000797
-Chuck FleischmannRepublicanHouseTN,AVANTIS INTERNATIONAL SMALL CAP VALUE ETFAVDV:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,INVESCO CURRENCYSHARES SWISS FRANC TRUSTFXF:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,iShares 10-20 Year Treasury Bond ETFTLH:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,$98.66,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,iShares 3-7 Year Treasury Bond ETFIEI:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,$117.88,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,iShares Core MSCI Europe ETFIEUR:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,$65.94,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,ISHARES BB RAT CORP BOND ETFHYBB:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,$46.61,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,SPDR Portfolio Developed World ex-US ETFSPDW:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,$40.32,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,SPDR® PORTFOLIO MORTGAGE BACKED BOND ETFSPMB:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,SPDR Portfolio S&P 500 Growth ETFSPYG:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,$97.22,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,SPDR S&P 400 Mid Cap Growth ETFMDYG:US,13:05Yesterday,17 Jul2025,days33,Joint,buy,1K–15K,$88.65,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,SPDR S&P 400 MID CAP VALUE ETFMDYV:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
-Chuck FleischmannRepublicanHouseTN,The Consumer Staples Select Sector SPDR FundXLP:US,13:05Yesterday,17 Jul2025,days33,Joint,sell,1K–15K,$81.11,https://www.capitoltrades.com/politicians/F000459
-Markwayne MullinRepublicanSenateOK,Unitedhealth Group IncUNH:US,03:00Yesterday,1 Aug2025,days17,Joint,sell,15K–50K,$237.77,https://www.capitoltrades.com/politicians/M001190
+Dan MeuserRepublicanHousePA,Alphabet IncGOOGL:US,13:05Today,11 Feb2025,days190,Spouse,sell,50K–100K,$185.32,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Amgen IncAMGN:US,13:05Today,11 Feb2025,days190,Spouse,sell,1K–15K,$296.66,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Apple IncAAPL:US,13:05Today,11 Feb2025,days190,Spouse,sell,15K–50K,$232.62,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Aptiv PLCAPTV:US,13:05Today,11 Feb2025,days190,Spouse,sell,1K–15K,$64.66,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Microsoft CorpMSFT:US,13:05Today,11 Feb2025,days190,Spouse,sell,1K–15K,$411.44,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Mondelez International IncMDLZ:US,13:05Today,11 Feb2025,days190,Spouse,sell,1K–15K,$60.45,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,NVIDIA CorporationNVDA:US,13:05Today,11 Feb2025,days190,Undisclosed,sell,250K–500K,$132.80,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,QUALCOMM IncQCOM:US,13:05Today,11 Feb2025,days190,Spouse,sell,15K–50K,$171.99,https://www.capitoltrades.com/politicians/M001204
+Dan MeuserRepublicanHousePA,Visa IncV:US,13:05Today,11 Feb2025,days190,Spouse,sell,15K–50K,$350.72,https://www.capitoltrades.com/politicians/M001204
+Thomas Kean JrRepublicanHouseNJ,Abbott LaboratoriesABT:US,13:05Today,21 Jul2025,days30,Undisclosed,buy,1K–15K,$124.42,https://www.capitoltrades.com/politicians/K000398
+Thomas Kean JrRepublicanHouseNJ,Adobe IncADBE:US,13:05Today,29 Jul2025,days22,Undisclosed,sell,1K–15K,$370.70,https://www.capitoltrades.com/politicians/K000398
+Thomas Kean JrRepublicanHouseNJ,Check Point Software Technologies LtdCHKP:US,13:05Today,29 Jul2025,days22,Undisclosed,buy,15K–50K,$218.33,https://www.capitoltrades.com/politicians/K000398
+Ritchie TorresDemocratHouseNY,Apple IncAAPL:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$211.16,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Ares Management CorpARES:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$177.37,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Ares Management CorpARES:US,13:05Today,9 Oct2024,days315,Undisclosed,buy,1K–15K,$158.16,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,ASML Holding NVASML:US,13:05Today,26 Sept2024,days328,Undisclosed,buy,1K–15K,$852.44,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,ASML Holding NVASML:US,13:05Today,26 Sept2024,days328,Undisclosed,buy,1K–15K,$852.44,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,ASML Holding NVASML:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$801.93,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Bank of America CorpBAC:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$46.73,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Blackrock IncBLK:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,"$1,101.64",https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Blackrock IncBLK:US,13:05Today,26 Sept2024,days328,Undisclosed,buy,1K–15K,$945.02,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Blackstone Group IncBX:US,13:05Today,26 Sept2024,days328,Undisclosed,buy,1K–15K,$153.47,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,Blackstone Group IncBX:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$162.00,https://www.capitoltrades.com/politicians/T000486
+Ritchie TorresDemocratHouseNY,BLUE OWL CAPITAL INCOWL:US,13:05Today,11 Jul2025,days40,Undisclosed,sell,1K–15K,$18.91,https://www.capitoltrades.com/politicians/T000486
+Chuck FleischmannRepublicanHouseTN,ISHARES BB RAT CORP BOND ETFHYBB:US,19 Aug2025,17 Jul2025,days33,Joint,buy,1K–15K,$46.61,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,SPDR Portfolio Developed World ex-US ETFSPDW:US,19 Aug2025,17 Jul2025,days33,Joint,buy,1K–15K,$40.32,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,SPDR® PORTFOLIO MORTGAGE BACKED BOND ETFSPMB:US,19 Aug2025,17 Jul2025,days33,Joint,sell,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,SPDR Portfolio S&P 500 Growth ETFSPYG:US,19 Aug2025,17 Jul2025,days33,Joint,buy,1K–15K,$97.22,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,SPDR S&P 400 Mid Cap Growth ETFMDYG:US,19 Aug2025,17 Jul2025,days33,Joint,buy,1K–15K,$88.65,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,SPDR S&P 400 MID CAP VALUE ETFMDYV:US,19 Aug2025,17 Jul2025,days33,Joint,sell,1K–15K,N/A,https://www.capitoltrades.com/politicians/F000459
+Chuck FleischmannRepublicanHouseTN,The Consumer Staples Select Sector SPDR FundXLP:US,19 Aug2025,17 Jul2025,days33,Joint,sell,1K–15K,$81.11,https://www.capitoltrades.com/politicians/F000459
+Markwayne MullinRepublicanSenateOK,Unitedhealth Group IncUNH:US,19 Aug2025,1 Aug2025,days17,Joint,sell,15K–50K,$237.77,https://www.capitoltrades.com/politicians/M001190
 Marjorie Taylor GreeneRepublicanHouseGA,FIGMA INC -REDHN/A,18 Aug2025,6 Aug2025,days9,Undisclosed,buy,1K–15K,N/A,https://www.capitoltrades.com/politicians/G000596
 Angus KingOtherSenateME,Unitedhealth Group IncUNH:US,18 Aug2025,15 Jul2025,days34,Spouse,sell,1K–15K,$291.71,https://www.capitoltrades.com/politicians/K000383
 Angus KingOtherSenateME,MAINE TURNPIKE AUTHORITYN/A,18 Aug2025,14 Jul2025,days35,Spouse,sell,15K–50K,N/A,https://www.capitoltrades.com/politicians/K000383
@@ -307,18 +323,18 @@ Lisa McClainRepublicanHouseMI,Danaher CorpDHR:US,14 Aug2025,22 Jul2025,days22,Sp
 Lisa McClainRepublicanHouseMI,Darden Restaurants IncDRI:US,14 Aug2025,16 Jul2025,days28,Spouse,buy,1K–15K,$208.25,https://www.capitoltrades.com/politicians/M001136
 Lisa McClainRepublicanHouseMI,Darden Restaurants IncDRI:US,14 Aug2025,22 Jul2025,days22,Spouse,sell,1K–15K,$209.26,https://www.capitoltrades.com/politicians/M001136
 Lisa McClainRepublicanHouseMI,SempraSRE:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$74.08,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,DEERE & COMPANYDE:US,14 Aug2025,16 Jul2025,days28,Spouse,sell,1K–15K,$507.73,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,DEERE & COMPANYDE:US,14 Aug2025,24 Jun2025,days50,Spouse,buy,1K–15K,$514.10,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Dell Technologies IncDELL:US,14 Aug2025,10 Jun2025,days64,Spouse,sell,1K–15K,$113.25,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Dell Technologies IncDELL:US,14 Aug2025,15 Jan2025,days210,Spouse,buy,1K–15K,$109.23,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Delta Air Lines IncDAL:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$47.32,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Diageo PLCDEO:US,14 Aug2025,24 Jun2025,days50,Spouse,buy,1K–15K,$101.20,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Diamondback Energy IncFANG:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$152.93,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Diamondback Energy IncFANG:US,14 Aug2025,16 Jul2025,days28,Spouse,sell,1K–15K,$136.47,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Dick's Sporting Goods Inc.DKS:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$174.84,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,DocuSign IncDOCU:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$74.81,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Dolby Laboratories IncDLB:US,14 Aug2025,24 Jun2025,days50,Spouse,buy,1K–15K,$74.16,https://www.capitoltrades.com/politicians/M001136
-Lisa McClainRepublicanHouseMI,Dollar General CorporationDG:US,14 Aug2025,11 Jun2025,days63,Spouse,sell,1K–15K,$111.45,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Alphabet IncGOOGL:US,14 Aug2025,10 Jun2025,days64,Spouse,sell,1K–15K,$180.01,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amazon.com IncAMZN:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$214.82,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amazon.com IncAMZN:US,14 Aug2025,22 Jul2025,days22,Spouse,sell,1K–15K,$227.47,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amazon.com IncAMZN:US,14 Aug2025,4 Aug2025,days9,Spouse,sell,1K–15K,$211.65,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amazon.com IncAMZN:US,14 Aug2025,9 Jun2025,days65,Spouse,buy,1K–15K,$216.98,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amazon.com IncAMZN:US,14 Aug2025,11 Dec2024,days245,Spouse,buy,1K–15K,$230.26,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,Amedisys IncAMED:US,14 Aug2025,9 Jun2025,days65,Spouse,buy,1K–15K,$94.22,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,American Airlines Group IncAAL:US,14 Aug2025,9 Jun2025,days65,Spouse,buy,1K–15K,$11.76,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,American Airlines Group IncAAL:US,14 Aug2025,11 Jun2025,days63,Spouse,sell,1K–15K,$11.06,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,American Express CoAXP:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$292.81,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,American International Group IncAIG:US,14 Aug2025,17 Jun2025,days57,Spouse,buy,1K–15K,$84.22,https://www.capitoltrades.com/politicians/M001136
+Lisa McClainRepublicanHouseMI,American International Group IncAIG:US,14 Aug2025,10 Jul2025,days34,Spouse,sell,1K–15K,$82.46,https://www.capitoltrades.com/politicians/M001136
 Lisa McClainRepublicanHouseMI,Dollar General CorporationDG:US,14 Aug2025,9 Jun2025,days65,Spouse,buy,1K–15K,$113.31,https://www.capitoltrades.com/politicians/M001136
 Lisa McClainRepublicanHouseMI,Dow IncDOW:US,14 Aug2025,24 Jun2025,days50,Spouse,buy,1K–15K,$27.53,https://www.capitoltrades.com/politicians/M001136
 Lisa McClainRepublicanHouseMI,Dropbox IncDBX:US,14 Aug2025,22 Jul2025,days22,Spouse,buy,1K–15K,$27.88,https://www.capitoltrades.com/politicians/M001136
@@ -5971,19 +5987,3 @@ Julie JohnsonDemocratHouseTX,Cigna CorpCI:US,15 Apr2025,19 Mar2025,days26,Joint,
 Julie JohnsonDemocratHouseTX,SeaWorld Entertainment IncSEAS:US,15 Apr2025,3 Mar2025,days42,Joint,sell,1K–15K,$50.77,https://www.capitoltrades.com/politicians/J000310
 Julie JohnsonDemocratHouseTX,Webster Financial CorpWBS:US,15 Apr2025,11 Mar2025,days34,Joint,sell,1K–15K,$48.72,https://www.capitoltrades.com/politicians/J000310
 Julie JohnsonDemocratHouseTX,Zoetis IncZTS:US,15 Apr2025,3 Mar2025,days42,Joint,sell,1K–15K,$170.53,https://www.capitoltrades.com/politicians/J000310
-Byron DonaldsRepublicanHouseFL,Abbott LaboratoriesABT:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$126.78,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Abbott LaboratoriesABT:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$126.78,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Amazon.com IncAMZN:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$194.95,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Amazon.com IncAMZN:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$194.95,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Arista Networks IncANET:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$82.97,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Arista Networks IncANET:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$82.97,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,AUTODESK IncADSK:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$267.82,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,AUTODESK IncADSK:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$267.82,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Broadcom IncAVGO:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$190.54,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Broadcom IncAVGO:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$190.54,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Brown & Brown IncBRO:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$119.80,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Brown & Brown IncBRO:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$119.80,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Chemed CorpCHE:US,15 Apr2025,6 Mar2025,days39,Spouse,sell,1K–15K,$594.35,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Chemed CorpCHE:US,15 Apr2025,6 Mar2025,days39,Undisclosed,sell,1K–15K,$594.35,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Chipotle Mexican Grill IncCMG:US,15 Apr2025,20 Mar2025,days25,Undisclosed,buy,1K–15K,$49.00,https://www.capitoltrades.com/politicians/D000032
-Byron DonaldsRepublicanHouseFL,Chipotle Mexican Grill IncCMG:US,15 Apr2025,20 Mar2025,days25,Spouse,buy,1K–15K,$49.00,https://www.capitoltrades.com/politicians/D000032
