@@ -1,7 +1,7 @@
 # modeling/backtest_ml_sell_fixed.py
 # Fixed ML-entry + TP/SL exit backtest (no sweep) with robust price cache repair.
 # Run:
-#   cd <repo-root>
+#   cd <repo-root>   # e.g., C:\Users\pusap\OneDrive\Desktop\project\Ada-Analytics
 #   python -m modeling.backtest_ml_sell_fixed
 
 import pandas as pd
@@ -12,8 +12,8 @@ import pickle
 import sys
 
 # ----------------- Repo paths -----------------
-BASE_DIR = Path(__file__).resolve().parent.parent
-ROOT = BASE_DIR.parent.parent                # repo root
+HERE = Path(__file__).resolve()
+ROOT = HERE.parent.parent                # repo root: ...\Ada-Analytics
 DATA = ROOT / "data"
 
 SCORED_FILE = DATA / "scored_test.csv"   # needs: published_dt, ticker, proba_best
@@ -22,14 +22,14 @@ SUMMARY_OUT = DATA / "backtest_summary_ml.csv"
 PRICE_CACHE = DATA / "price_cache.pkl"
 # ----------------------------------------------
 
-# ------------- Your locked settings -----------
+# ------------- Locked settings ----------------
 PROBA_THRESHOLD = 0.75
 HOLDING_DAYS    = 7
 TP_PCT          = 0.08
 SL_PCT          = 0.05
 TP_FIRST        = True
 COST_BPS        = 10
-MAX_POS_PER_DAY = None   # e.g., 10 to cap per day; None = no cap
+MAX_POS_PER_DAY = None   # e.g., 10 to cap positions per day; None = no cap
 # ----------------------------------------------
 
 def _scalar(v):
@@ -64,16 +64,14 @@ def ensure_ohlc(df: pd.DataFrame) -> pd.DataFrame:
     """Ensure columns Open/High/Low/Close exist. If missing, synthesize conservatively."""
     cols = df.columns
     out = df.copy()
-    # If only 'Adj Close' present (rare), fall back to 'Close'
     if "Close" not in cols and "Adj Close" in cols:
         out["Close"] = out["Adj Close"]
     if "Open" not in out.columns and "Close" in out.columns:
         out["Open"] = out["Close"]
     if "High" not in out.columns and "Close" in out.columns:
         out["High"] = out["Close"]
-    if "Low" not in out.columns and "Close" in out.columns:
-        out["Low"] = out["Close"]
-    # Keep only needed columns
+    if "Low"  not in out.columns and "Close" in out.columns:
+        out["Low"]  = out["Close"]
     keep = [c for c in ["Open","High","Low","Close"] if c in out.columns]
     out = out[keep].copy()
     out.index = pd.to_datetime(out.index, errors="coerce")
@@ -87,7 +85,7 @@ def yf_fetch_one(ticker: str, start: pd.Timestamp, end: pd.Timestamp) -> pd.Data
         hist = yf.download(
             ticker,
             start=(start - pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
-            end=(end + pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
+            end=(end   + pd.Timedelta(days=10)).strftime("%Y-%m-%d"),
             interval="1d",
             progress=False,
             auto_adjust=False,
@@ -110,20 +108,17 @@ def load_or_build_price_cache(tickers, start, end) -> dict:
             cache = {}
 
     need = set(map(str.upper, tickers))
-    have = set(cache.keys())
     to_check = sorted(list(need))
     updated = 0
 
     for t in to_check:
         df = cache.get(t)
         if df is None or not isinstance(df, pd.DataFrame) or not {"Open","High","Low","Close"}.issubset(df.columns):
-            # refetch from Yahoo
             refetched = yf_fetch_one(t, start, end)
             if refetched is not None and not refetched.empty:
                 cache[t] = refetched
                 updated += 1
             else:
-                # last resort: if we had any df, synthesize; else store empty
                 if isinstance(df, pd.DataFrame) and not df.empty:
                     cache[t] = ensure_ohlc(df)
                 else:
@@ -140,7 +135,6 @@ def load_or_build_price_cache(tickers, start, end) -> dict:
     else:
         print(f"[OK] Using cached prices ({len(cache)} tickers) -> {PRICE_CACHE}")
 
-    # Final sanitize all frames
     for t in list(cache.keys()):
         cache[t] = ensure_ohlc(cache[t])
 
@@ -175,7 +169,6 @@ def exit_tp_sl(px: pd.DataFrame, entry_dt, entry_open, holding_days, tp_pct, sl_
             if lo <= sl_level: return d, sl_level, "stop_loss"
             if hi >= tp_level: return d, tp_level, "take_profit"
 
-    # time exit at close if no TP/SL hit
     exit_dt = all_dates[pos1]
     exit_close = _scalar(px.loc[exit_dt, "Close"])
     if exit_close is None: return None
@@ -194,8 +187,7 @@ def simulate_trade(px: pd.DataFrame, published_dt: pd.Timestamp):
 
     res = exit_tp_sl(px, entry_dt, entry_open, HOLDING_DAYS, TP_PCT, SL_PCT, TP_FIRST)
     if res is None:
-        # If TP/SL unavailable (e.g., missing High/Low), fall back to time exit on HOLDING_DAYS
-        # using Close; this keeps the backtest running conservatively.
+        # Fallback: time exit on HOLDING_DAYS using Close.
         all_dates = px.index
         pos0 = all_dates.get_loc(entry_dt)
         pos1 = min(pos0 + HOLDING_DAYS - 1, len(all_dates) - 1)
