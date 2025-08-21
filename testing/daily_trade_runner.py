@@ -1,7 +1,7 @@
 # execution/daily_trade_runner.py
 # Daily BUY/SELL order generation + optional Alpaca submission (paper).
 # - Buys: latest disclosure date ≤ TODAY, proba_best ≥ 0.75, equal-weight sizing
-# - Sells: TP=+8%, SL=-5%, max hold=7 trading days, from open_positions.csv
+# - Sells: TP=+8%, SL=−5%, max hold=7 trading days, from open_positions.csv
 # - Outputs Alpaca-ready CSVs (buy + sell) and submits if SUBMIT_TO_ALPACA=True
 #
 # Run:
@@ -9,11 +9,19 @@
 #   python -m execution.daily_trade_runner
 
 import os
+import warnings
 import numpy as np
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
 import yfinance as yf
+from decimal import Decimal, ROUND_HALF_UP
+from dotenv import load_dotenv
+load_dotenv()
+
+
+# Silence yfinance auto_adjust FutureWarnings
+warnings.filterwarnings("ignore", category=FutureWarning, module="yfinance")
 
 # Optional Alpaca submission
 try:
@@ -45,7 +53,7 @@ SL_PCT = 0.05
 MAX_HOLD_DAYS = 7
 
 # Alpaca submission
-SUBMIT_TO_ALPACA = False  # set True to actually submit
+SUBMIT_TO_ALPACA = True  # set True to actually submit
 PAPER = True              # paper account
 # ----------------------------------------------
 
@@ -58,14 +66,24 @@ def _scalar(v):
     except Exception:
         return None
 
+# ----- Tick helpers (for Alpaca price constraints) -----
+def tick_for_price(last_price: float) -> float:
+    # US equities tick size: $0.01 for >= $1, else $0.0001
+    return 0.01 if last_price >= 1.0 else 0.0001
+
+def round_to_tick(price: float, tick: float) -> float:
+    q = Decimal(str(tick))
+    return float(Decimal(str(price)).quantize(q, rounding=ROUND_HALF_UP))
+# ------------------------------------------------------
+
 def load_scored(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path)
-    need = {"published_dt","ticker","proba_best"}
+    need = {"published_dt", "ticker", "proba_best"}
     if not need.issubset(df.columns):
         raise ValueError(f"{path} must contain: {sorted(need)}")
     df["published_dt"] = pd.to_datetime(df["published_dt"], errors="coerce")
     df["ticker"] = df["ticker"].astype(str).str.upper().str.strip()
-    df = df.dropna(subset=["published_dt","ticker","proba_best"])
+    df = df.dropna(subset=["published_dt", "ticker", "proba_best"])
     # pick the latest available disclosure date ≤ TODAY
     today = pd.to_datetime(TODAY).normalize()
     df = df[df["published_dt"] <= today]
@@ -82,7 +100,7 @@ def load_scored(path: Path) -> pd.DataFrame:
 
 def fetch_last_price_yf(symbol: str) -> float | None:
     try:
-        bar = yf.download(symbol, period="5d", interval="1d", progress=False).tail(1)
+        bar = yf.download(symbol, period="5d", interval="1d", progress=False, auto_adjust=False).tail(1)
         if bar is None or bar.empty:
             return None
         return _scalar(bar["Close"].iloc[-1])
@@ -123,9 +141,14 @@ def build_buy_orders(candidates: pd.DataFrame) -> pd.DataFrame:
         return pd.DataFrame(columns=["symbol","qty","side","type","time_in_force",
                                      "take_profit_price","stop_loss_price"])
 
-    # compute bracket price levels from last_price (approx)
-    cand["take_profit_price"] = np.round(cand["last_price"] * (1 + TP_PCT), 4)
-    cand["stop_loss_price"]   = np.round(cand["last_price"] * (1 - SL_PCT), 4)
+    # compute bracket price levels WITH TICK ROUNDING
+    tp_prices, sl_prices = [], []
+    for lp in cand["last_price"]:
+        tick = tick_for_price(lp)
+        tp_prices.append(round_to_tick(lp * (1 + TP_PCT), tick))
+        sl_prices.append(round_to_tick(lp * (1 - SL_PCT), tick))
+    cand["take_profit_price"] = tp_prices
+    cand["stop_loss_price"]   = sl_prices
 
     orders = cand.assign(
         symbol=cand["ticker"],

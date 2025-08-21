@@ -1,0 +1,5 @@
+symbol,qty,side,type,time_in_force,take_profit_price,stop_loss_price
+A,83,buy,market,day,128.64,113.15
+MSTR,29,buy,market,day,371.92,327.15
+HD,24,buy,market,day,433.88,381.65
+MRVL,140,buy,market,day,76.92,67.66
