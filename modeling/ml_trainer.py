@@ -25,14 +25,13 @@ MAX_CATEGORIES = 50
 PREFERRED_TARGETS = ["fwd_5d_ret","fwd_3d_ret","fwd_10d_ret","fwd_1d_ret"]
 
 def load_data(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
-    df["published_dt"] = pd.to_datetime(df["published_dt"], errors="coerce")
+    df = pd.read_csv(path, parse_dates=["published_dt"])
     return df
 
 def choose_target(df: pd.DataFrame) -> str:
     present = [c for c in PREFERRED_TARGETS if c in df.columns and df[c].notna().sum() >= 50]
     if not present:
-        raise ValueError(f"No suitable target columns found. Expected one of: {PREFERRED_TARGETS}")
+        raise ValueError(f"No suitable target columns found.")
     print(f"[INFO] Using target: {present[0]}")
     return present[0]
 
@@ -42,8 +41,14 @@ def time_split(df: pd.DataFrame, test_size: float):
     return df.iloc[:split_idx], df.iloc[split_idx:]
 
 def prepare_features(df: pd.DataFrame, target_col: str):
-    y = (df[target_col] > 0).astype(int)
+    # --- REVISED: Create a binary target (1 for up, 0 for down/flat) ---
+    y = (df[target_col] > 0.01).astype(int) # Price increased more than 1%
+    
     X = df.drop(columns=[c for c in df.columns if c.startswith('fwd_') or c in ["published_dt", "detail_url", target_col]])
+    
+    # --- NEW: Add 'type' (purchase/sale) as a feature ---
+    if 'type' in X.columns:
+        X['type'] = X['type'].apply(lambda x: 'purchase' if 'purchase' in str(x) else 'sale')
     
     cat_cols = [c for c in X.select_dtypes(include=['object', 'category']).columns if X[c].nunique() < MAX_CATEGORIES]
     num_cols = X.select_dtypes(include=np.number).columns.tolist()
@@ -98,7 +103,7 @@ def main():
     joblib.dump(lr, LR_MODEL_OUT)
     joblib.dump(gb, GB_MODEL_OUT)
 
-    scored = test_df[["published_dt","ticker"]].copy()
+    scored = test_df[["published_dt","ticker", "type"]].copy()
     scored["y_true"] = y_test.values
     scored["proba_logreg"] = lr_proba
     scored["proba_gboost"] = gb_proba

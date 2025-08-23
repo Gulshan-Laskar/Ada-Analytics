@@ -44,7 +44,7 @@ MAX_HOLD_DAYS = 7
 # Alpaca submission
 SUBMIT_TO_ALPACA = True
 PAPER = True
-CANCEL_OPEN_ORDERS_ON_START = True # <-- NEW: Set to False to disable canceling orders
+CANCEL_OPEN_ORDERS_ON_START = True # Set to False to disable canceling orders
 # ----------------------------------------------
 
 def _scalar(v):
@@ -108,7 +108,6 @@ def build_buy_orders(candidates: pd.DataFrame, open_positions: list, buying_powe
     for _, row in candidates.iterrows():
         ticker = row['ticker']
         
-        # --- Alpaca Safety Check: Is the asset tradable? ---
         if api:
             try:
                 asset = api.get_asset(ticker)
@@ -134,7 +133,6 @@ def build_buy_orders(candidates: pd.DataFrame, open_positions: list, buying_powe
         position_size_usd = buying_power * PORTFOLIO_RISK_PER_TRADE
         qty = int(position_size_usd / risk_per_share)
         
-        # --- Buying Power Safety Check ---
         estimated_cost = qty * last_price
         if total_cost + estimated_cost > buying_power:
             print(f"[INFO] Not enough buying power for {ticker}. Stopping buy order creation.")
@@ -264,8 +262,6 @@ def main():
     else:
         print("\n[INFO] SUBMIT_TO_ALPACA=False (DRY RUN). Review CSVs.")
 
-    # --- FIX for FutureWarning ---
-    # Create lists of DataFrames that are not empty before concatenating
     dfs_to_concat = []
     if not still_open_df.empty:
         dfs_to_concat.append(still_open_df)

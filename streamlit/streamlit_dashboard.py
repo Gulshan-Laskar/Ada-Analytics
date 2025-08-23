@@ -31,12 +31,24 @@ with st.sidebar:
     st.header("⚙️ Controls")
     
     pipeline_scripts = [
-        (SCRAPERS_DIR / "capitoltrades_scrape.py"), (SCRAPERS_DIR / "yahoo_scrape.py"), (SCRAPERS_DIR / "reddit_scrapping.py"),
-        (PROCESSING_DIR / "enrich_data.py"), (PROCESSING_DIR / "engineer_features.py"), (PROCESSING_DIR / "assemble_master_dataset.py"),
-        (MODELING_DIR / "model_signal.py"), (MODELING_DIR / "backtesting.py"), (MODELING_DIR / "cohort_diagnostics.py"),
-        (MODELING_DIR / "ml_ready_output.py"), (MODELING_DIR / "ml_trainer.py"), (MODELING_DIR / "backtest_ml_threshold.py"),
-        (MODELING_DIR / "today_suggestions.py")
-    ]
+    # Scraping
+    (SCRAPERS_DIR / "capitoltrades_scrape.py"),
+    (SCRAPERS_DIR / "yahoo_scrape.py"),
+    (SCRAPERS_DIR / "reddit_scrapping.py"),
+    # Processing
+    (PROCESSING_DIR / "enrich_data.py"),
+    (PROCESSING_DIR / "engineer_features.py"),
+    (PROCESSING_DIR / "assemble_master_dataset.py"),
+    # Modeling & Backtesting
+    (MODELING_DIR / "model_signal.py"),
+    (MODELING_DIR / "model_sell_signal.py"), 
+    (MODELING_DIR / "backtesting.py"),
+    (MODELING_DIR / "cohort_diagnostics.py"),
+    (MODELING_DIR / "ml_ready_output.py"),
+    (MODELING_DIR / "ml_trainer.py"),
+    (MODELING_DIR / "backtest_ml_threshold.py"),
+    (MODELING_DIR / "today_suggestions.py")
+]
 
     if st.button("▶️ Run Full Data Pipeline", type="primary"):
         all_scripts_found = True

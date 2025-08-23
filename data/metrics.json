@@ -17,44 +17,44 @@
     "sector"
   ],
   "logreg": {
-    "roc_auc": 0.4843498323973706,
-    "pr_auc": 0.5759262345899214,
-    "accuracy": 0.44803695150115475,
-    "precision": 0.5689655172413793,
-    "recall": 0.13360323886639677,
+    "roc_auc": 0.5235732009925558,
+    "pr_auc": 0.46260089643057317,
+    "accuracy": 0.5727482678983834,
+    "precision": 0.5135135135135135,
+    "recall": 0.10215053763440861,
     "threshold": 0.5,
     "confusion_matrix": [
       [
-        161,
-        25
+        229,
+        18
       ],
       [
-        214,
-        33
+        167,
+        19
       ]
     ],
-    "positives": 247,
-    "negatives": 186
+    "positives": 186,
+    "negatives": 247
   },
   "gboost": {
-    "roc_auc": 0.5110683035131252,
-    "pr_auc": 0.6050452937495203,
-    "accuracy": 0.47344110854503463,
-    "precision": 0.620253164556962,
-    "recall": 0.19838056680161945,
+    "roc_auc": 0.4614405119498498,
+    "pr_auc": 0.43472826946464826,
+    "accuracy": 0.5681293302540416,
+    "precision": 0.4878048780487805,
+    "recall": 0.10752688172043011,
     "threshold": 0.5,
     "confusion_matrix": [
       [
-        156,
-        30
+        226,
+        21
       ],
       [
-        198,
-        49
+        166,
+        20
       ]
     ],
-    "positives": 247,
-    "negatives": 186
+    "positives": 186,
+    "negatives": 247
   },
-  "best_model": "gboost"
+  "best_model": "logreg"
 }
