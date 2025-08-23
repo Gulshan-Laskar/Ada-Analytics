@@ -17,28 +17,45 @@ def _scalar(v):
     try:
         f = float(v)
         return f if np.isfinite(f) and f > 0 else None
-    except Exception: return None
+    except (ValueError, TypeError): return None
 
 def load_scored(path: Path) -> pd.DataFrame:
-    df = pd.read_csv(path)
-    df["published_dt"] = pd.to_datetime(df["published_dt"], errors="coerce")
+    df = pd.read_csv(path, parse_dates=["published_dt"])
     df["ticker"] = df["ticker"].astype(str).str.upper().str.strip()
     df.dropna(subset=["published_dt","ticker","proba_best"], inplace=True)
     return df[df["proba_best"] >= PROBA_THRESHOLD].drop_duplicates(subset=["ticker","published_dt"]).reset_index(drop=True)
 
 def fetch_prices(tickers, start, end):
-    start_buf, end_buf = start - pd.Timedelta(days=10), end + pd.Timedelta(days=10)
-    data = {}
-    for t in sorted(set(tickers)):
+    start_buf, end_buf = start - pd.Timedelta(days=10), end + pd.Timedelta(days=20) # Increased end buffer
+    
+    # Download all tickers at once for efficiency
+    data = yf.download(
+        tickers,
+        start=start_buf,
+        end=end_buf,
+        progress=False,
+        auto_adjust=False,
+        actions=False,
+        interval="1d",
+        group_by='ticker'
+    )
+    
+    prices = {}
+    for t in tickers:
         try:
-            hist = yf.download(t, start=start_buf, end=end_buf, progress=False, auto_adjust=False, actions=False, interval="1d")
-            if not hist.empty:
-                px = hist[["Open","Close"]].copy()
+            # Extract data for each ticker, handling single vs multi-ticker download format
+            if len(tickers) == 1:
+                hist = data
+            else:
+                hist = data[t]
+
+            if not hist.empty and not hist.isnull().all().all():
+                px = hist[["Open","Close"]].dropna()
                 px.index = pd.to_datetime(px.index).tz_localize(None)
-                data[t] = px.groupby(level=0).first().sort_index()
-        except Exception as e:
-            print(f"[WARN] {t}: {e}")
-    return data
+                prices[t] = px.groupby(level=0).first().sort_index()
+        except (KeyError, IndexError):
+            print(f"[WARN] No data returned for ticker: {t}")
+    return prices
 
 def next_trading_day(idx: pd.DatetimeIndex, after: pd.Timestamp):
     pos = idx.searchsorted(after + pd.Timedelta(days=1))
@@ -47,7 +64,8 @@ def next_trading_day(idx: pd.DatetimeIndex, after: pd.Timestamp):
 def simulate_time_exit(px: pd.DataFrame, published_dt: pd.Timestamp):
     if px is None or px.empty: return None
     entry_dt = next_trading_day(px.index, published_dt)
-    if entry_dt is None: return None
+    if entry_dt is None or entry_dt not in px.index: return None
+    
     o = _scalar(px.loc[entry_dt, "Open"])
     if o is None: return None
     
@@ -67,10 +85,14 @@ def simulate_time_exit(px: pd.DataFrame, published_dt: pd.Timestamp):
 def main():
     filt = load_scored(SCORED_FILE)
     if filt.empty:
-        print(f"[ERROR] No rows pass threshold {PROBA_THRESHOLD}."); return
+        print(f"[INFO] No rows in scored_test.csv pass the probability threshold of {PROBA_THRESHOLD}.")
+        # Create empty files to signify a completed run with no trades
+        pd.DataFrame().to_csv(TRADES_OUT, index=False)
+        pd.DataFrame().to_csv(SUMMARY_OUT, index=False)
+        return
 
     min_dt, max_dt = filt["published_dt"].min(), filt["published_dt"].max()
-    prices = fetch_prices(filt["ticker"].tolist(), min_dt, max_dt)
+    prices = fetch_prices(filt["ticker"].unique().tolist(), min_dt, max_dt)
 
     rows = []
     for _, r in filt.iterrows():
@@ -78,7 +100,12 @@ def main():
         if sim:
             rows.append({"ticker": r["ticker"], "published_dt": r["published_dt"], "proba_best": r["proba_best"], **sim})
 
-    trades = pd.DataFrame(rows).sort_values(["published_dt","ticker"])
+    trades = pd.DataFrame(rows)
+    
+    # --- FIX: Handle case where no trades could be simulated ---
+    if not trades.empty:
+        trades.sort_values(["published_dt","ticker"], inplace=True)
+
     TRADES_OUT.parent.mkdir(parents=True, exist_ok=True)
     trades.to_csv(TRADES_OUT, index=False)
 
@@ -88,6 +115,7 @@ def main():
         avg = trades["net_return"].mean()
         sharpe = avg / trades["net_return"].std(ddof=1) if trades["net_return"].std(ddof=1) > 0 else np.nan
     else:
+        print("[WARN] No trades were executed after simulating. This may be due to missing price data.")
         wr = avg = sharpe = np.nan
 
     summary = pd.DataFrame([{"trades": n, "win_rate": wr, "avg_trade_return": avg, "sharpe_per_trade": sharpe, "holding_days": HOLDING_DAYS, "cost_bps": COST_BPS, "proba_threshold": PROBA_THRESHOLD}])

@@ -1,2 +1,2 @@
 trades,win_rate,avg_trade_return,sharpe_per_trade,holding_days,cost_bps,proba_threshold
-13,0.7692307692307693,0.03201724509858863,0.4900184323872127,5,10,0.7
+0,,,,5,10,0.7

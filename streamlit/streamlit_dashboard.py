@@ -64,7 +64,8 @@ with st.sidebar:
                     log_messages.append(f"❌ ERROR in {script_path.name}")
                     st.error(f"Error running {script_path.name}:"); st.code(e.stderr); st.stop()
             log_messages.append("\n🎉 Pipeline finished successfully!")
-            log_area.success("\n".join(log_messages)); st.rerun()
+            log_area.success("\n".join(log_messages))
+            # FIX: Removed the automatic st.rerun() to keep the final log message visible
 
     st.markdown("---")
     st.header("🧹 Maintenance")
@@ -136,5 +137,3 @@ if metrics_file.exists():
         st.error(f"Could not load model metrics: {e}")
 else:
     st.warning("No model performance metrics found.")
-
-st.sidebar.write(f"Python executable: {sys.executable}")
