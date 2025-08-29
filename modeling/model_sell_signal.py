@@ -20,12 +20,10 @@ def main():
     df = pd.read_csv(INPUT_FILE, parse_dates=["published_dt"])
 
     # --- Filter for Sell-type Transactions ---
-    # We are only interested in when politicians are selling
     sell_df = df[df['type'].str.contains('sale', case=False, na=False)].copy()
 
     if sell_df.empty:
         print("No sell transactions found in the master dataset.")
-        # Create an empty file to signify a completed run
         pd.DataFrame().to_csv(OUTPUT_FILE, index=False)
         return
 
@@ -37,19 +35,13 @@ def main():
             sell_df[col] = pd.to_numeric(sell_df[col], errors='coerce').fillna(0)
 
     # --- Define Sell Signal Logic ---
-    # A strong sell signal might be a large trade with high consensus (many politicians selling)
     big_trade = (sell_df["trade_size_vs_market_cap"] >= sell_df["trade_size_vs_market_cap"].quantile(0.8)) | \
                 (sell_df["size_avg_usd"] >= sell_df["size_avg_usd"].quantile(0.8))
     
-    consensus_sell = sell_df["consensus_score_7d"] >= 1  # At least one other politician sold recently
-
-    # A spike in negative sentiment could also be a strong signal
+    consensus_sell = sell_df["consensus_score_7d"] >= 1
     negative_sentiment_spike = sell_df["sentiment_score"] <= sell_df["sentiment_score"].quantile(0.2)
-
-    # Combine the logic to create the final signal
     signal = big_trade & (consensus_sell | negative_sentiment_spike)
 
-    # Assign a signal strength (0 or 1)
     sell_df["sell_signal_strength"] = np.where(signal, 1, 0)
     
     # --- Save the Output ---

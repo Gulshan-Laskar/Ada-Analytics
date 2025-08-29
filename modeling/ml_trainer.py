@@ -41,12 +41,9 @@ def time_split(df: pd.DataFrame, test_size: float):
     return df.iloc[:split_idx], df.iloc[split_idx:]
 
 def prepare_features(df: pd.DataFrame, target_col: str):
-    # --- REVISED: Create a binary target (1 for up, 0 for down/flat) ---
     y = (df[target_col] > 0.01).astype(int) # Price increased more than 1%
-    
     X = df.drop(columns=[c for c in df.columns if c.startswith('fwd_') or c in ["published_dt", "detail_url", target_col]])
     
-    # --- NEW: Add 'type' (purchase/sale) as a feature ---
     if 'type' in X.columns:
         X['type'] = X['type'].apply(lambda x: 'purchase' if 'purchase' in str(x) else 'sale')
     
